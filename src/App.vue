@@ -11,6 +11,9 @@
       <li v-if="!isLoggedIn()">
         <a class="nav-link" href="/login">Login</a>
       </li>
+      <li v-if="isLoggedIn()">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
     </div>
     <router-view />
   </div>
