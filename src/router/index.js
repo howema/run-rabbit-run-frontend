@@ -4,6 +4,9 @@ import Home from "../views/Home.vue";
 import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
+import Experiences from "../views/ExperiencesIndex.vue";
+import Tags from "../views/TagsIndex.vue";
+import ExperiencesShow from "../views/ExperiencesShow.vue";
 
 Vue.use(VueRouter);
 
@@ -24,6 +27,9 @@ const routes = [
   { path: "/signup", name: "signup", component: Signup },
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
+  { path: "/experiences", name: "experiences-index", component: Experiences },
+  { path: "/tags", name: "tags-index", component: Tags },
+  { path: "/experiences/:id", name: "experiences-show", component: ExperiencesShow },
 ];
 
 const router = new VueRouter({

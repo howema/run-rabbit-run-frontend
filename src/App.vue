@@ -14,6 +14,12 @@
       <li v-if="isLoggedIn()">
         <a class="nav-link" href="/logout">Logout</a>
       </li>
+      <li v-if="isLoggedIn()">
+        <a class="nav-link" href="/experiences">Experiences</a>
+      </li>
+      <li v-if="isLoggedIn()">
+        <a class="nav-link" href="/tags">Tags</a>
+      </li>
     </div>
     <router-view />
   </div>
@@ -51,4 +57,3 @@ export default {
   },
 };
 </script>
-
