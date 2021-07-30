@@ -4,6 +4,13 @@
       <router-link to="/">Home</router-link>
       |
       <router-link to="/about">About</router-link>
+      |
+      <li v-if="!isLoggedIn()">
+        <a class="nav-link" href="/signup">Sign-up</a>
+      </li>
+      <li v-if="!isLoggedIn()">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
     </div>
     <router-view />
   </div>
@@ -31,3 +38,14 @@
   color: #42b983;
 }
 </style>
+
+<script>
+export default {
+  methods: {
+    isLoggedIn: function () {
+      return localStorage.getItem("jwt");
+    },
+  },
+};
+</script>
+
