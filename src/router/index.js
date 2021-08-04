@@ -9,6 +9,7 @@ import Tags from "../views/TagsIndex.vue";
 import ExperiencesShow from "../views/ExperiencesShow.vue";
 import ExperiencesEdit from "../views/ExperiencesEdit.vue";
 import ExperiencesNew from "../views/ExperiencesNew.vue";
+import TravelTag from "../views/TravelTag.vue";
 
 Vue.use(VueRouter);
 
@@ -34,6 +35,7 @@ const routes = [
   { path: "/experiences/new", name: "experiences-new", component: ExperiencesNew },
   { path: "/experiences/:id", name: "experiences-show", component: ExperiencesShow },
   { path: "/experiences/:id/edit", name: "experiences-edit", component: ExperiencesEdit },
+  { path: "/travel", name: "travel-tag", component: TravelTag },
 ];
 
 const router = new VueRouter({
