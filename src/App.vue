@@ -1,25 +1,27 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>
-      |
-      <router-link to="/about">About</router-link>
-      |
-      <li v-if="!isLoggedIn()">
+      <ul v-if="isLoggedIn()">
+        <router-link to="/">Home</router-link>
+      </ul>
+      <ul>
+        <router-link to="/about">Welcome</router-link>
+      </ul>
+      <ul v-if="!isLoggedIn()">
         <a class="nav-link" href="/signup">Sign-up</a>
-      </li>
-      <li v-if="!isLoggedIn()">
+      </ul>
+      <ul v-if="!isLoggedIn()">
         <a class="nav-link" href="/login">Login</a>
-      </li>
-      <li v-if="isLoggedIn()">
-        <a class="nav-link" href="/logout">Logout</a>
-      </li>
-      <li v-if="isLoggedIn()">
+      </ul>
+      <ul v-if="isLoggedIn()">
         <a class="nav-link" href="/experiences">Experiences</a>
-      </li>
-      <li v-if="isLoggedIn()">
+      </ul>
+      <ul v-if="isLoggedIn()">
         <a class="nav-link" href="/tags">Tags</a>
-      </li>
+      </ul>
+      <ul v-if="isLoggedIn()">
+        <a class="nav-link" href="/logout">Logout</a>
+      </ul>
     </div>
     <router-view />
   </div>
