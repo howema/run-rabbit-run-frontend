@@ -25,7 +25,7 @@
         <a class="nav-link" href="/tags">Tags</a>
       </ul>
       <!-- <ul v-if="isLoggedIn()"> -->
-      <ul>  
+      <ul>
         <a class="nav-link" href="/logout">Logout</a>
       </ul>
     </div>

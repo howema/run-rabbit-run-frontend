@@ -3,7 +3,7 @@
     <div class="container">
       <h1>{{ experience.title }}</h1>
       <p>{{ experience.subtasks }}</p>
-      <p>Directed by: {{ experience.notes }}</p>
+      <p>{{ experience.notes }}</p>
       <!-- <p>{{ experience.image }}</p> -->
       <p></p>
       <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit experience</button></router-link>

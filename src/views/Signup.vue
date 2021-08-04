@@ -14,6 +14,10 @@
         <input type="email" v-model="newUserParams.email" />
       </div>
       <div>
+        <label>Favorite Thing:</label>
+        <input type="text" v-model="newUserParams.favorite_thing" />
+      </div>
+      <div>
         <label>Password:</label>
         <input type="password" v-model="newUserParams.password" />
       </div>

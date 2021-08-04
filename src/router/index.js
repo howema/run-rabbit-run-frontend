@@ -8,6 +8,7 @@ import Experiences from "../views/ExperiencesIndex.vue";
 import Tags from "../views/TagsIndex.vue";
 import ExperiencesShow from "../views/ExperiencesShow.vue";
 import ExperiencesEdit from "../views/ExperiencesEdit.vue";
+import ExperiencesNew from "../views/ExperiencesNew.vue";
 
 Vue.use(VueRouter);
 
@@ -30,6 +31,7 @@ const routes = [
   { path: "/logout", name: "logout", component: Logout },
   { path: "/experiences", name: "experiences-index", component: Experiences },
   { path: "/tags", name: "tags-index", component: Tags },
+  { path: "/experiences/new", name: "experiences-new", component: ExperiencesNew },
   { path: "/experiences/:id", name: "experiences-show", component: ExperiencesShow },
   { path: "/experiences/:id/edit", name: "experiences-edit", component: ExperiencesEdit },
 ];
