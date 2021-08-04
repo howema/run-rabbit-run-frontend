@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <ul>
-        <router-link to="/about">Welcome</router-link>
+        <router-link to="/welcome">Welcome</router-link>
       </ul>
       <!-- <ul v-if="isLoggedIn()"> -->
       <ul>
