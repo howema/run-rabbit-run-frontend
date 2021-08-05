@@ -17,6 +17,10 @@
         <label>Notes:</label>
         <input type="text" v-model="newExperienceParams.notes" />
       </div>
+      <div>
+        <label>Image:</label>
+        <input type="text" v-model="newExperienceParams.image" />
+      </div>
       <input type="submit" value="Create" />
     </form>
   </div>

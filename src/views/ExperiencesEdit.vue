@@ -18,7 +18,7 @@
         <input type="text" v-model="currentExperienceParams.notes" />
       </div>
       <div>
-        <label>Image Url:</label>
+        <label>Image:</label>
         <input type="text" v-model="currentExperienceParams.image" />
       </div>
       <input type="submit" value="Submit" />

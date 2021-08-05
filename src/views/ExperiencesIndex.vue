@@ -4,7 +4,7 @@
     <div v-for="experience in experiences" v-bind:key="experience.id">
       <h2>{{ experience.title }}</h2>
       <p></p>
-      <img v-bind:src="experience.image" alt="experience.title"/>
+      <img v-bind:src="experience.image" />
       <p>Subtasks: {{ experience.subtasks }}</p>
       <p>Notes: {{ experience.notes }}</p>
       <router-link v-bind:to="`/experiences/${experience.id}`">
@@ -13,6 +13,12 @@
     </div>
   </div>
 </template>
+
+<style>
+.image {
+  width: 50%;
+}
+</style>
 
 <script>
 import axios from "axios";

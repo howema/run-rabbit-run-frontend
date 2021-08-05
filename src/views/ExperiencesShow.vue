@@ -2,12 +2,13 @@
   <div class="experiences-show">
     <div class="container">
       <h1>{{ experience.title }}</h1>
+      <img v-bind:src="experience.image" />
       <p>Subtasks: {{ experience.subtasks }}</p>
       <p>Notes: {{ experience.notes }}</p>
       <!-- <p>Tags: {{ experience_tag.tag_id }}</p> -->
-      <p>Tags: {{ tag.name }}</p>
+      <!-- <p>Tags: {{ tag.name }}</p>
       <p>Tags: {{ experience.tag }}</p>
-      <p>Tags: {{ experience.tags }}</p>
+      <p>Tags: {{ experience.tags }}</p> -->
 
       <!-- <p>{{ experience.image }}</p> -->
       <p></p>
