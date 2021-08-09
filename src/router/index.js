@@ -15,6 +15,8 @@ import TagFaceYourFears from "../views/TagFaceYourFears.vue";
 import TagLifeMilestones from "../views/TagLifeMilestones.vue";
 import TagEspeciallyWeird from "../views/TagEspeciallyWeird.vue";
 import TagNothingToIt from "../views/TagNothingToIt.vue";
+import Bucket from "../views/Bucket.vue";
+import ExperienceTagsNew from "../views/ExperienceTagsNew.vue";
 
 Vue.use(VueRouter);
 
@@ -46,6 +48,8 @@ const routes = [
   { path: "/life-milestones", name: "life-milestones-tag", component: TagLifeMilestones },
   { path: "/especially-weird", name: "especially-weird-tag", component: TagEspeciallyWeird },
   { path: "/nothing-to-it", name: "nothing-to-it-tag", component: TagNothingToIt },
+  { path: "/bucket", name: "bucket-index", component: Bucket },
+  { path: "/experiences/:id/experience-tags-new", name: "experience-tags-new", component: ExperienceTagsNew },
 ];
 
 const router = new VueRouter({

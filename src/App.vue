@@ -30,6 +30,8 @@
       <!-- <ul> -->
       <a class="nav-link" href="/tags">Tags</a>
       |
+      <a class="nav-link" href="/bucket">Bucket</a>
+      |
       <!-- </ul> -->
       <!-- <ul v-if="isLoggedIn()"> -->
       <!-- <ul> -->
