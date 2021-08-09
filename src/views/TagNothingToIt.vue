@@ -2,6 +2,9 @@
   <div class="nothing-to-it-tag">
     <div class="container">
       <h1><i>#NothingToIt</i></h1>
+      <router-link to="/experiences">
+        <button>But Actually (list of all things there's "nothing to")</button>
+      </router-link>
       <div v-for="experience in experiences" v-bind:key="experience.id">
         <div>
           <h2>{{ experience.title }}</h2>
