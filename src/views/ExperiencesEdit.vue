@@ -22,15 +22,18 @@
         <input type="text" v-model="currentExperienceParams.image" />
       </div>
       <input type="submit" value="Submit" />
+      <router-link v-bind:to="`/experiences/${experience.id}/experience-tags-new`">
+        <button>Add a tag</button>
+      </router-link>
     </form>
     <!-- <input type="checkbox" id="tag1" value="Just An Idea" v-model="checkedTags">
     <label for="tag1">Just An Idea</label> -->
     <!-- <p></p>
     <button v-on:click="movesToBucket()">Completed? Move it into your bucket!</button>
     <p></p> -->
-    <router-link v-bind:to="`/experiences/${experience.id}/experience-tags-new`">
+    <!-- <router-link v-bind:to="`/experiences/${experience.id}/experience-tags-new`">
       <button>Add a tag</button>
-    </router-link>
+    </router-link> -->
     <button v-on:click="destroyExperience()">Delete</button>
   </div>
 </template>

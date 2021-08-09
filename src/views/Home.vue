@@ -9,5 +9,7 @@
     <router-link to="/tags"><button>View by Tag</button></router-link>
     <p></p>
     <router-link to="/experiences/new"><button>Add an Experience</button></router-link>
+    <p></p>
+    <router-link to="/bucket"><button>View Bucket</button></router-link>
   </div>
 </template>
