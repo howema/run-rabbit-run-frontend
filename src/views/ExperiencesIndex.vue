@@ -15,8 +15,8 @@
 </template>
 
 <style>
-.image {
-  width: 50%;
+img {
+  max-width: 300px;
 }
 </style>
 
@@ -36,8 +36,9 @@ export default {
   methods: {
     indexExperiences: function () {
       axios.get("/experiences").then((response) => {
-        console.log("experiences index", response);
+        console.log("experiences index", response.data);
         this.experiences = response.data;
+        console.log(this.experiences);
       });
     },
   },

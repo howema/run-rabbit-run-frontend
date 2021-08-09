@@ -28,10 +28,10 @@ export default {
     };
   },
   created: function () {
-    axios.get("/experiences/" + this.$route.params.id).then((response) => {
-      this.experience = response.data;
-      console.log(response.data);
-    });
+    // axios.get("/experiences/" + this.$route.params.id).then((response) => {
+    //   this.experience = response.data;
+    //   console.log(response.data);
+    // });
     axios.get("/tags/4" + this.$route.params.id).then((response) => {
       this.tag = response.data;
       console.log(response.data);

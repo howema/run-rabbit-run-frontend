@@ -22,8 +22,8 @@
         <input type="text" v-model="currentExperienceParams.image" />
       </div>
       <input type="submit" value="Submit" />
-      <button v-on:click="destroyExperience()">Delete</button>
     </form>
+    <button v-on:click="destroyExperience()">Delete</button>
   </div>
 </template>
 
@@ -52,7 +52,7 @@ export default {
     updateExperience: function () {
       axios.patch(`/experiences/${this.$route.params.id}`, this.currentExperienceParams).then((response) => {
         console.log(response.data);
-        this.$router.push(`/experiences/${response.data.id}`);
+        this.$router.push("/experiences");
       });
     },
   },
