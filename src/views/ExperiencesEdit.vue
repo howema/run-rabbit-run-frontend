@@ -23,6 +23,9 @@
       </div>
       <input type="submit" value="Submit" />
     </form>
+    <!-- <input type="checkbox" id="tag1" value="Just An Idea" v-model="checkedTags">
+    <label for="tag1">Just An Idea</label> -->
+    <p></p>
     <button v-on:click="destroyExperience()">Delete</button>
   </div>
 </template>
@@ -34,6 +37,7 @@ export default {
     return {
       currentExperienceParams: {},
       errors: [],
+      // checkedTags: [],
     };
   },
   created: function () {
