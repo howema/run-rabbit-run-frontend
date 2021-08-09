@@ -1,5 +1,7 @@
 <template>
   <div class="experiences-index">
+    <router-link to="/experiences/new"><button>Add an Experience</button></router-link>
+    <p></p>
     <h1>All Experiences</h1>
     <div v-for="experience in experiences" v-bind:key="experience.id">
       <h2>{{ experience.title }}</h2>

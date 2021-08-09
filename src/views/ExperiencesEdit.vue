@@ -1,7 +1,7 @@
 <template>
   <div class="experiences-edit">
     <form v-on:submit.prevent="updateExperience()">
-      <h1>Edit experience</h1>
+      <h1>Edit Experience</h1>
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
