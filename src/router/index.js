@@ -10,6 +10,8 @@ import ExperiencesShow from "../views/ExperiencesShow.vue";
 import ExperiencesEdit from "../views/ExperiencesEdit.vue";
 import ExperiencesNew from "../views/ExperiencesNew.vue";
 import TravelTag from "../views/TravelTag.vue";
+import JustAnIdeaTag from "../views/JustAnIdeaTag.vue";
+import FaceYourFearsTag from "../views/FaceYourFears.vue";
 
 Vue.use(VueRouter);
 
@@ -36,6 +38,8 @@ const routes = [
   { path: "/experiences/:id", name: "experiences-show", component: ExperiencesShow },
   { path: "/experiences/:id/edit", name: "experiences-edit", component: ExperiencesEdit },
   { path: "/travel", name: "travel-tag", component: TravelTag },
+  { path: "/just-an-idea", name: "just-an-idea-tag", component: JustAnIdeaTag },
+  { path: "/face-your-fears", name: "face-your-fears-tag", component: FaceYourFearsTag },
 ];
 
 const router = new VueRouter({

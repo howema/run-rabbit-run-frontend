@@ -1,7 +1,7 @@
 <template>
-  <div class="travel-tag">
+  <div class="just-an-idea-tag">
     <div class="container">
-      <h1>All Experiences tagged with TRAVEL</h1>
+      <h1>All Experiences tagged with JUST AN IDEA</h1>
       <div v-for="experience in experiences" v-bind:key="experience.id">
         <div>
           <h2>{{ experience.title }}</h2>
@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     indexExperiences: function () {
-      axios.get("/tags/4" + this.$route.params.id).then((response) => {
+      axios.get("/tags/1" + this.$route.params.id).then((response) => {
         this.tag = response.data;
         let experiences = response.data.experiences;
         console.log(response.data.experiences);

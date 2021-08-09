@@ -3,10 +3,10 @@
     <h1>All Tags</h1>
     <p></p>
     <router-link to="/just-an-idea"><button>Just An Idea</button></router-link>
-    <router-link to="/face-fears"><button>Face Your Fears</button></router-link>
+    <router-link to="/face-your-fears"><button>Face Your Fears</button></router-link>
     <router-link to="/life-milestones"><button>Life Milestones</button></router-link>
     <div></div>
-    <router-link to="/travel"><button>*Travel*</button></router-link>
+    <router-link to="/travel"><button>Travel</button></router-link>
     <router-link to="/especially-weird"><button>Especially Weird</button></router-link>
     <router-link to="/nothing-to-it"><button>Nothing To It</button></router-link>
 
