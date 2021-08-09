@@ -1,7 +1,7 @@
 <template>
   <div class="just-an-idea-tag">
     <div class="container">
-      <h1>All Experiences tagged with JUST AN IDEA</h1>
+      <h1><i>#JustAnIdea</i></h1>
       <div v-for="experience in experiences" v-bind:key="experience.id">
         <div>
           <h2>{{ experience.title }}</h2>

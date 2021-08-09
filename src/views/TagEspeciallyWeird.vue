@@ -1,7 +1,7 @@
 <template>
   <div class="especially-weird-tag">
     <div class="container">
-      <h1>All Experiences tagged with Especially Weird</h1>
+      <h1><i>#EspeciallyWeird</i></h1>
       <div v-for="experience in experiences" v-bind:key="experience.id">
         <div>
           <h2>{{ experience.title }}</h2>
