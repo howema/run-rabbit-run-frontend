@@ -3,7 +3,14 @@
     <div class="container">
       <h1>All Experiences tagged with TRAVEL</h1>
       <div v-for="experience in experiences" v-bind:key="experience.id">
-        <div>{{ experience.title }}</div>
+        <div>
+          <h2>{{ experience.title }}</h2>
+          <img v-bind:src="experience.image" />
+          <p></p>
+          <router-link v-bind:to="`/experiences/${experience.id}`">
+            <small><button type="button" class="btn btn-info">More Info</button></small>
+          </router-link>
+        </div>
       </div>
       <p></p>
       <p></p>
