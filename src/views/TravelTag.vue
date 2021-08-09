@@ -3,10 +3,7 @@
     <div class="container">
       <h1>All Experiences tagged with TRAVEL</h1>
       <div v-for="experience in experiences" v-bind:key="experience.id">
-        -->
-        <!-- <p>Tags1: {{ tag.name }}</p> -->
-        <p>Tags2: {{ experiences.tag }}</p>
-        <p>Tags3: {{ experience.tags }}</p>
+        <div>{{ experience.title }}</div>
       </div>
       <p></p>
       <p></p>
@@ -25,6 +22,7 @@ export default {
       experience: {},
       experience_tag: {},
       tag: {},
+      current_user_id: localStorage.getItem("user_id"),
     };
   },
   created: function () {
@@ -32,17 +30,20 @@ export default {
     //   this.experience = response.data;
     //   console.log(response.data);
     // });
-    axios.get("/tags/4" + this.$route.params.id).then((response) => {
-      this.tag = response.data;
-      console.log(response.data);
-    });
     this.indexExperiences();
   },
   methods: {
     indexExperiences: function () {
-      axios.get("/experiences").then((response) => {
-        console.log("experiences index", response);
-        this.experiences = response.data;
+      axios.get("/tags/4" + this.$route.params.id).then((response) => {
+        this.tag = response.data;
+        let experiences = response.data.experiences;
+        console.log(response.data.experiences);
+        experiences.map((experience) => {
+          if (experience.user_id == this.current_user_id) {
+            this.experiences.push(experience);
+          }
+        });
+        console.log(this.experiences);
       });
     },
   },
