@@ -9,9 +9,12 @@ import Tags from "../views/TagsIndex.vue";
 import ExperiencesShow from "../views/ExperiencesShow.vue";
 import ExperiencesEdit from "../views/ExperiencesEdit.vue";
 import ExperiencesNew from "../views/ExperiencesNew.vue";
-import TravelTag from "../views/TravelTag.vue";
-import JustAnIdeaTag from "../views/JustAnIdeaTag.vue";
-import FaceYourFearsTag from "../views/FaceYourFears.vue";
+import TagTravel from "../views/TagTravel.vue";
+import TagJustAnIdea from "../views/TagJustAnIdea.vue";
+import TagFaceYourFears from "../views/TagFaceYourFears.vue";
+import TagLifeMilestones from "../views/TagLifeMilestones.vue";
+import TagEspeciallyWeird from "../views/TagEspeciallyWeird.vue";
+import TagNothingToIt from "../views/TagNothingToIt.vue";
 
 Vue.use(VueRouter);
 
@@ -37,9 +40,12 @@ const routes = [
   { path: "/experiences/new", name: "experiences-new", component: ExperiencesNew },
   { path: "/experiences/:id", name: "experiences-show", component: ExperiencesShow },
   { path: "/experiences/:id/edit", name: "experiences-edit", component: ExperiencesEdit },
-  { path: "/travel", name: "travel-tag", component: TravelTag },
-  { path: "/just-an-idea", name: "just-an-idea-tag", component: JustAnIdeaTag },
-  { path: "/face-your-fears", name: "face-your-fears-tag", component: FaceYourFearsTag },
+  { path: "/travel", name: "travel-tag", component: TagTravel },
+  { path: "/just-an-idea", name: "just-an-idea-tag", component: TagJustAnIdea },
+  { path: "/face-your-fears", name: "face-your-fears-tag", component: TagFaceYourFears },
+  { path: "/life-milestones", name: "life-milestones-tag", component: TagLifeMilestones },
+  { path: "/especially-weird", name: "especially-weird-tag", component: TagEspeciallyWeird },
+  { path: "/nothing-to-it", name: "nothing-to-it-tag", component: TagNothingToIt },
 ];
 
 const router = new VueRouter({
