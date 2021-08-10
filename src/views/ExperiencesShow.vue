@@ -10,6 +10,7 @@
       <p></p>
       <router-link to="/experiences">Back to experiences</router-link>
     </div>
+     <div v-if="experience.complete == false">
     <form v-on:submit.prevent="updateCheckbox()">
       <div id="v-model-checkbox" class="completed">
         <input type="checkbox" id="checkbox" v-model="checked" />
@@ -19,6 +20,7 @@
       </div>
       <input type="submit" value="Submit" />
     </form>
+    </div>
   </div>
 </template>
 

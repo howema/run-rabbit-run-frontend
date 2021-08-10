@@ -4,16 +4,16 @@
     <p></p>
     <h1>All Experiences</h1>
     <div v-for="experience in experiences" v-bind:key="experience.id">
-       <div v-if="experience.complete == false">
-      <h2>{{ experience.title }}</h2>
-      <p></p>
-      <img v-bind:src="experience.image" />
-      <!-- <p>Subtasks: {{ experience.subtasks }}</p>
+      <div v-if="experience.complete == false">
+        <h2>{{ experience.title }}</h2>
+        <p></p>
+        <img v-bind:src="experience.image" />
+        <!-- <p>Subtasks: {{ experience.subtasks }}</p>
       <p>Notes: {{ experience.notes }}</p> -->
-      <p></p>
-      <router-link v-bind:to="`/experiences/${experience.id}`">
-        <small><button type="button" class="btn btn-info">More Info</button></small>
-      </router-link>
+        <p></p>
+        <router-link v-bind:to="`/experiences/${experience.id}`">
+          <small><button type="button" class="btn btn-info">More Info</button></small>
+        </router-link>
       </div>
     </div>
   </div>
