@@ -8,7 +8,7 @@
       <div>
         <p><i>Enter a '4' if you want to tag as "Travel"</i></p>
         <label>Tag ID:</label>
-        <input type="text" v-model="newExperienceTagsParams.tag_id" />
+        <input type="text" v-model="newExperienceTagsParams" />
       </div>
       <input type="submit" value="Create" />
     </form>
@@ -27,16 +27,16 @@ export default {
   created: function () {
     axios.get(`/experiences/${this.$route.params.id}`).then((response) => {
       console.log("experience info:", response.data);
-      // this.currentExperienceParams = response.data;
     });
   },
   methods: {
     createExperienceTag: function () {
+      var params = { tag_id: params };
       axios
-        .post("/experience-tags", this.newExperienceTagsParams)
+        .post("/experience-tags", params)
         .then((response) => {
           console.log("experience tag created", response);
-          this.$router.push("/experiences");
+          this.$router.push(`/experiences/${this.$route.params.id}`);
         })
         .catch((error) => {
           console.log("experiences create error", error.response);

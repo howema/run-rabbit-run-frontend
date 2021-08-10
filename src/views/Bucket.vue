@@ -11,10 +11,10 @@
         <h2>{{ experience.title }}</h2>
         <p></p>
         <img v-bind:src="experience.image" />
-      <p><i>You did it!</i></p>
-      <router-link v-bind:to="`/experiences/${experience.id}`">
-        <small><button type="button" class="btn btn-info">More Info</button></small>
-      </router-link>
+        <p><i>You did it!</i></p>
+        <router-link v-bind:to="`/experiences/${experience.id}`">
+          <small><button type="button" class="btn btn-info">More Info</button></small>
+        </router-link>
       </div>
     </div>
   </div>

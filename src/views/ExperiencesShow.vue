@@ -10,17 +10,17 @@
       <p></p>
       <router-link to="/experiences">Back to experiences</router-link>
     </div>
-    <!-- <div v-if="experience.complete == false"> -->
-    <form v-on:submit.prevent="updateCheckbox()">
-      <div id="v-model-checkbox" class="completed">
-        <input type="checkbox" id="checkbox" v-model="checked" />
-        <label for="checkbox">{{ "Complete?" }}</label>
-        <p></p>
-      </div>
-      <input type="submit" value="Submit" />
-    </form>
+    <div v-if="experience.complete == false">
+      <form v-on:submit.prevent="updateCheckbox()">
+        <div id="v-model-checkbox" class="completed">
+          <input type="checkbox" id="checkbox" v-model="checked" />
+          <label for="checkbox">{{ "Complete?" }}</label>
+          <p></p>
+        </div>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
   </div>
-  <!-- </div> -->
 </template>
 
 <style>
@@ -62,7 +62,7 @@ export default {
       var params = { complete: true };
       axios.patch(`/experiences/${this.$route.params.id}`, params).then((response) => {
         console.log(response.data);
-        // this.$router.push(`/experiences/${this.$route.params.id}`);
+        this.$router.push(`/experiences/${this.$route.params.id}`);
       });
     },
   },
