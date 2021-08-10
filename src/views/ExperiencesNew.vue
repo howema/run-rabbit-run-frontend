@@ -39,7 +39,7 @@ export default {
   methods: {
     createExperience: function () {
       axios
-        .post("/experiences-tags-new", this.newExperienceParams)
+        .post("/experiences", this.newExperienceParams)
         .then((response) => {
           console.log("experiences create", response);
           this.$router.push("/experiences");

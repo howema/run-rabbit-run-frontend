@@ -27,13 +27,13 @@ export default {
   created: function () {
     axios.get(`/experiences/${this.$route.params.id}`).then((response) => {
       console.log("experience info:", response.data);
-      this.currentExperienceParams = response.data;
+      // this.currentExperienceParams = response.data;
     });
   },
   methods: {
     createExperienceTag: function () {
       axios
-        .post("/experiences", this.newExperienceTagsParams)
+        .post("/experience-tags", this.newExperienceTagsParams)
         .then((response) => {
           console.log("experience tag created", response);
           this.$router.push("/experiences");
