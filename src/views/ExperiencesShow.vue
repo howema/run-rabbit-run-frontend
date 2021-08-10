@@ -16,8 +16,27 @@
       <p></p>
       <router-link to="/experiences">Back to experiences</router-link>
     </div>
+    <div id="v-model-checkbox" class="completed">
+      <input type="checkbox" id="checkbox" v-model="checked" />
+      <label for="checkbox">{{ "Complete?" }}</label>
+      <p></p>
+      <input type="submit" value="Submit" />
+    </div>
   </div>
 </template>
+
+<style>
+.completed {
+  /* font-family: sans-serif; */
+  border: 1px solid #eee;
+  border-radius: 2px;
+  padding: 20px 30px;
+  margin-top: 1em;
+  margin-bottom: 40px;
+  user-select: none;
+  overflow-x: auto;
+}
+</style>
 
 <script>
 import axios from "axios";
@@ -28,6 +47,7 @@ export default {
       experience: {},
       experience_tag: {},
       tag: {},
+      checked: false,
     };
   },
   created: function () {

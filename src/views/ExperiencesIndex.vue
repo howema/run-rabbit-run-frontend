@@ -7,8 +7,9 @@
       <h2>{{ experience.title }}</h2>
       <p></p>
       <img v-bind:src="experience.image" />
-      <p>Subtasks: {{ experience.subtasks }}</p>
-      <p>Notes: {{ experience.notes }}</p>
+      <!-- <p>Subtasks: {{ experience.subtasks }}</p>
+      <p>Notes: {{ experience.notes }}</p> -->
+      <p></p>
       <router-link v-bind:to="`/experiences/${experience.id}`">
         <small><button type="button" class="btn btn-info">More Info</button></small>
       </router-link>
