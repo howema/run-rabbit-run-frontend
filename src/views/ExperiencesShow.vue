@@ -10,18 +10,17 @@
       <p></p>
       <router-link to="/experiences">Back to experiences</router-link>
     </div>
-     <div v-if="experience.complete == false">
+    <!-- <div v-if="experience.complete == false"> -->
     <form v-on:submit.prevent="updateCheckbox()">
       <div id="v-model-checkbox" class="completed">
         <input type="checkbox" id="checkbox" v-model="checked" />
         <label for="checkbox">{{ "Complete?" }}</label>
         <p></p>
-        <!-- <p v-if="experience.complete == true">displays in bucket</p> -->
       </div>
       <input type="submit" value="Submit" />
     </form>
-    </div>
   </div>
+  <!-- </div> -->
 </template>
 
 <style>
