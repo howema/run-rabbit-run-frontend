@@ -5,29 +5,25 @@
       <img v-bind:src="experience.image" />
       <p>Subtasks: {{ experience.subtasks }}</p>
       <p>Notes: {{ experience.notes }}</p>
-      <!-- <p>Tags: {{ experience_tag.tag_id }}</p> -->
-      <!-- <p>Tags: {{ tag.name }}</p>
-      <p>Tags: {{ experience.tag }}</p>
-      <p>Tags: {{ experience.tags }}</p> -->
-
-      <!-- <p>{{ experience.image }}</p> -->
       <p></p>
       <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit experience</button></router-link>
       <p></p>
       <router-link to="/experiences">Back to experiences</router-link>
     </div>
-    <div id="v-model-checkbox" class="completed">
-      <input type="checkbox" id="checkbox" v-model="checked" />
-      <label for="checkbox">{{ "Complete?" }}</label>
-      <p></p>
+    <form v-on:submit.prevent="updateCheckbox()">
+      <div id="v-model-checkbox" class="completed">
+        <input type="checkbox" id="checkbox" v-model="checked" />
+        <label for="checkbox">{{ "Complete?" }}</label>
+        <p></p>
+        <!-- <p v-if="experience.complete == true">displays in bucket</p> -->
+      </div>
       <input type="submit" value="Submit" />
-    </div>
+    </form>
   </div>
 </template>
 
 <style>
 .completed {
-  /* font-family: sans-serif; */
   border: 1px solid #eee;
   border-radius: 2px;
   padding: 20px 30px;
@@ -59,6 +55,15 @@ export default {
       this.tag = response.data;
       console.log(response.data);
     });
+  },
+  methods: {
+    updateCheckbox: function () {
+      var params = { complete: true };
+      axios.patch(`/experiences/${this.$route.params.id}`, params).then((response) => {
+        console.log(response.data);
+        // this.$router.push(`/experiences/${this.$route.params.id}`);
+      });
+    },
   },
 };
 </script>
