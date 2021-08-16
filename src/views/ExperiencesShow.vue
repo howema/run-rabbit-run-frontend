@@ -8,12 +8,9 @@
       <p></p>
       <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit experience</button></router-link>
       <p></p>
-      <p>Tags: {{ experience.tags[0]["name"] }}</p>
-      <p>Tags: {{ experience.tags[1]["name"] }}</p>
-
-      <div v-for="experience in experiences" v-bind:key="experience.id">
-        <p>Tags: {{ experience.tags[0]["name"] }}</p>
-      </div>
+      <p>
+        <i>Tags: #{{ experience.tags[0]["name"] }}, #{{ experience.tags[1]["name"] }}</i>
+      </p>
       <!-- **This is displaying the names of tags!!! -->
       <div>
         <form v-on:submit.prevent="addTag()">
@@ -73,6 +70,7 @@ export default {
     return {
       errors: [],
       experience: {},
+      name: {},
       experience_tag: {},
       tag: {},
       checked: false,
