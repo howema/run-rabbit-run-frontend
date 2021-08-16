@@ -8,10 +8,6 @@
       <p></p>
       <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit experience</button></router-link>
       <p></p>
-      <p>Tags: {{ experience.experience_tags }}</p>
-      <p>Tags: {{ experience.experience_tags[0]["tag_id"] }}</p>
-      <!-- **This is diplaying the first tag of 4 which is travel!!! -->
-      <!-- <p>Tags: {{ experience.tags[0][3] }}</p> -->
       <p>Tags: {{ experience.tags[0]["name"] }}</p>
       <p>Tags: {{ experience.tags[1]["name"] }}</p>
 
