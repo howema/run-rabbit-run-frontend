@@ -1,12 +1,13 @@
 <template>
   <div class="home">
     <h1>Run Rabbit Run</h1>
-    <h2><i>Welcome -insert- to your homepage!</i></h2>
-    <p>I know your fav thing is -insert- {{}}. Goods news is: this tastes like -insert-.</p>
-    <!-- <div v-for="user in users" v-bind:key="user.id">
-      {{ user.favorite_thing }}
-    </div> -->
-    {{ user.favorite_thing }}
+    <h2>
+      <i>Welcome {{ user.name }} to your homepage!</i>
+    </h2>
+    <p>
+      Hello dear friend. I know your fav thing is {{ user.favorite_thing }}. Goods news! This app tastes like
+      {{ user.favorite_thing }}.
+    </p>
 
     <p></p>
     <router-link to="/experiences"><button>View All</button></router-link>
