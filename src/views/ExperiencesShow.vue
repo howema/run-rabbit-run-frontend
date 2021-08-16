@@ -9,18 +9,21 @@
       <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit experience</button></router-link>
       <p></p>
       <div>
-        <Multiselect
-          v-model="value"
-          mode="multiple"
-          :options="{
-            just_an_idea: 'Just An Idea',
-            face_your_fears: 'Face Your Fears',
-            life_milestones: 'Life Milestone',
-            travel: 'Travel',
-            especially_weird: 'Especially Weird',
-            nothing_to_it: 'Nothing To It',
-          }"
-        />
+        <form v-on:submit.prevent="addTag()">
+          <Multiselect
+            v-model="value"
+            mode="multiple"
+            :options="{
+              just_an_idea: 'Just An Idea',
+              face_your_fears: 'Face Your Fears',
+              life_milestones: 'Life Milestones',
+              travel: 'Travel',
+              especially_weird: 'Especially Weird',
+              nothing_to_it: 'Nothing To It',
+            }"
+          />
+          <input type="submit" value="Add Tags" />
+        </form>
       </div>
       <p></p>
       <router-link to="/experiences">Back to experiences</router-link>
@@ -67,7 +70,7 @@ export default {
       tag: {},
       checked: false,
       value: null,
-      options: ["Just An Idea", "Face Your Fears", "Life Milestones", "Travel", "Especially Weird", "Nothing to It"],
+      options: [],
     };
   },
   created: function () {
@@ -89,6 +92,10 @@ export default {
       });
     },
     addTag: function () {
+      // var data = options.json();
+      // data.results.map((item) => {
+      //   return { value: item.js, label: item.js };
+      // });
       // axios.post("experience-tags", this.);
     },
   },
