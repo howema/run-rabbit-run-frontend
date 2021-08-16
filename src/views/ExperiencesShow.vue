@@ -62,7 +62,7 @@ export default {
       var params = { complete: true };
       axios.patch(`/experiences/${this.$route.params.id}`, params).then((response) => {
         console.log(response.data);
-        this.$router.push(`/experiences/${this.$route.params.id}`);
+        this.$router.push("/bucket");
       });
     },
   },
