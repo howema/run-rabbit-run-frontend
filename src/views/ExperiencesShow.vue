@@ -8,6 +8,21 @@
       <p></p>
       <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit experience</button></router-link>
       <p></p>
+      <div>
+        <Multiselect
+          v-model="value"
+          mode="multiple"
+          :options="{
+            just_an_idea: 'Just An Idea',
+            face_your_fears: 'Face Your Fears',
+            life_milestones: 'Life Milestone',
+            travel: 'Travel',
+            especially_weird: 'Especially Weird',
+            nothing_to_it: 'Nothing To It',
+          }"
+        />
+      </div>
+      <p></p>
       <router-link to="/experiences">Back to experiences</router-link>
     </div>
     <div v-if="experience.complete == false">
@@ -22,7 +37,7 @@
     </div>
   </div>
 </template>
-
+<!--
 <style>
 .completed {
   border: 1px solid #eee;
@@ -34,10 +49,16 @@
   overflow-x: auto;
 }
 </style>
+-->
+<style src="@vueform/multiselect/themes/default.css"></style>
 
 <script>
 import axios from "axios";
+import Multiselect from "@vueform/multiselect/dist/multiselect.vue2.js";
 export default {
+  components: {
+    Multiselect,
+  },
   data: function () {
     return {
       errors: [],
@@ -45,6 +66,8 @@ export default {
       experience_tag: {},
       tag: {},
       checked: false,
+      value: null,
+      options: ["Just An Idea", "Face Your Fears", "Life Milestones", "Travel", "Especially Weird", "Nothing to It"],
     };
   },
   created: function () {
@@ -64,6 +87,9 @@ export default {
         console.log(response.data);
         this.$router.push("/bucket");
       });
+    },
+    addTag: function () {
+      // axios.post("experience-tags", this.);
     },
   },
 };

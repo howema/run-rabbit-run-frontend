@@ -22,9 +22,9 @@
         <input type="text" v-model="currentExperienceParams.image" />
       </div>
       <input type="submit" value="Submit" />
-      <router-link v-bind:to="`/experiences/${currentExperienceParams.id}/experience-tags-new`">
+      <!-- <router-link v-bind:to="`/experiences/${currentExperienceParams.id}/experience-tags-new`">
         <button>Add a tag</button>
-      </router-link>
+      </router-link> -->
     </form>
     <!-- <input type="checkbox" id="tag1" value="Just An Idea" v-model="checkedTags">
     <label for="tag1">Just An Idea</label> -->
