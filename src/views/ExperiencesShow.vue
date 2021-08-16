@@ -8,10 +8,10 @@
       <p></p>
       <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit experience</button></router-link>
       <p></p>
-      <p>
+      <!-- <p>
         <i>Tags: #{{ experience.tags[0]["name"] }}, #{{ experience.tags[1]["name"] }}</i>
-      </p>
-      <!-- **This is displaying the names of tags!!! -->
+      </p> -->
+      <!-- **This is displaying the names of tags!!! But doesn't work on every page..... -->
       <div>
         <form v-on:submit.prevent="addTag()">
           <Multiselect
