@@ -9,21 +9,34 @@
       <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit experience</button></router-link>
       <p></p>
       <div v-for="tag in experience_tags" v-bind:key="tag.id">{{ tag.name }}</div>
-      <!-- <i>Tags: #{{ experience.tags[0]["name"] }}, #{{ experience.tags[1]["name"] }}</i> -->
-
-      <!-- **This is displaying the names of tags!!! But doesn't work on every page..... -->
-      <!-- <div> -->
       <div class="example">
         <form v-on:submit.prevent="createTag()">
-          <!-- <h3 id="example-2">#2 - Multiselect with object options</h3> -->
           <div class="output">Tags: {{ tag_id }}</div>
-          <!-- <Multiselect v-model="example2.value" v-bind="example2"></Multiselect> -->
-          <Multiselect v-model="tag_id" mode="multiple" :options="options" />
+
+          <multiselect
+            v-model="value"
+            :options="options"
+            :multiple="true"
+            :close-on-select="false"
+            :clear-on-select="false"
+            :preserve-search="true"
+            placeholder="Choose tags"
+            label="name"
+            track-by="name"
+            :preselect-first="true"
+          >
+            <template slot="selection" slot-scope="{ values, search, isOpen }">
+              <span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">
+                {{ values.length }} options selected
+              </span>
+            </template>
+          </multiselect>
           <input type="submit" value="Add Tags" />
         </form>
       </div>
       <p></p>
       <router-link to="/experiences">Back to experiences</router-link>
+      {{ value }}
     </div>
     <div v-if="experience.complete == false">
       <form v-on:submit.prevent="updateCheckbox()">
@@ -50,11 +63,11 @@
 }
 </style>
 -->
-<style src="@vueform/multiselect/themes/default.css"></style>
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 
 <script>
 import axios from "axios";
-import Multiselect from "@vueform/multiselect/dist/multiselect.vue2.js";
+import Multiselect from "vue-multiselect";
 export default {
   components: {
     Multiselect,
@@ -68,11 +81,8 @@ export default {
       tags: [],
       checked: false,
       tag_id: null,
-      options: { key: "value" },
-      example2: {
-        mode: "multiple",
-        value: [],
-      },
+      value: [],
+      options: [],
     };
   },
   created: function () {
@@ -81,20 +91,23 @@ export default {
       this.experience_tags = response.data.tags;
       console.log(response.data);
     });
-    // const data = await response.json();
-  },
-  mounted: function () {
-    axios.get("/tags/").then((response) => {
-      this.tags = response.data;
-      console.log(response.data);
-      // var tag1 = this.tags[0];
-      // var tag2 = this.tags[1];
-      // this.options[tag1.id] = "just an idea";
-      // this.options[tag2.id] = "face your fears";
-      console.log(this.options);
-    });
+    this.getTags();
   },
   methods: {
+    getTags: function () {
+      axios.get("/tags/").then((response) => {
+        response.data.forEach((item) => {
+          console.log(item);
+          var object = {};
+          object["name"] = item.name;
+          object["id"] = item.id;
+          this.options.push(object);
+        });
+        this.tags = response.data;
+        console.log(response.data);
+        console.log(this.options);
+      });
+    },
     updateCheckbox: function () {
       var params = { complete: true };
       axios.patch(`/experiences/${this.$route.params.id}`, params).then((response) => {
@@ -104,26 +117,20 @@ export default {
     },
     createTag: function () {
       var params = { experience_id: `${this.$route.params.id}`, tag_id: this.tag_id };
-      axios
-        .post("/experience-tags", params)
-        .then((response) => {
-          console.log("experience tag created", response);
-          // this.$router.push("/experiences");
-        })
-        .catch((error) => {
-          console.log("experiences create error", error.response);
-          this.errors = error.response.data.errors;
-        });
-      // var data = options.json();
-      // data.results.map((item) => {
-      //   return { value: item.js, label: item.js };
-      // });
-      // axios.post("experience-tags", this.);
+      this.value.forEach((item) => {
+        axios
+          .post("/experience-tags", params)
+          .then((response) => {
+            console.log("experience tag created", response);
+            // this.$router.push("/experiences");
+          })
+          .catch((error) => {
+            console.log("experiences create error", error.response);
+            this.errors = error.response.data.errors;
+          });
+        this.value.push(item);
+      });
     },
-    //      return data.results.map((item) => {
-    //     return { value: item.js, label: item.js }
-    //   })
-    // }
   },
 };
 </script>
