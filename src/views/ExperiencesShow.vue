@@ -35,8 +35,9 @@
         </form>
       </div>
       <p></p>
-      <router-link to="/experiences">Back to experiences</router-link>
       {{ value }}
+      <p></p>
+      <router-link to="/experiences">Back to experiences</router-link>
     </div>
     <div v-if="experience.complete == false">
       <form v-on:submit.prevent="updateCheckbox()">
@@ -48,6 +49,7 @@
         <input type="submit" value="Submit" />
       </form>
     </div>
+    <button v-on:click="strikeThrough()">Try it</button>
   </div>
 </template>
 <!--
@@ -80,7 +82,7 @@ export default {
       experience_tags: [],
       tags: [],
       checked: false,
-      tag_id: null,
+      tag_id: [],
       value: [],
       options: [],
     };
@@ -116,21 +118,28 @@ export default {
       });
     },
     createTag: function () {
-      var params = { experience_id: `${this.$route.params.id}`, tag_id: this.tag_id };
+      var params = { experience_id: `${this.$route.params.id}`, tag_id: this.value.tag_id };
       this.value.forEach((item) => {
+        this.item;
         axios
           .post("/experience-tags", params)
           .then((response) => {
             console.log("experience tag created", response);
-            // this.$router.push("/experiences");
           })
           .catch((error) => {
             console.log("experiences create error", error.response);
             this.errors = error.response.data.errors;
           });
-        this.value.push(item);
+        this.value.id.push(item);
       });
+      // this.$router.push("/experiences");
     },
+    // strikeThrough: function (text) {
+    //   return text
+    //     .split("")
+    //     .map((char) => char + "\u0336")
+    //     .join("");
+    // },
   },
 };
 </script>

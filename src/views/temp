@@ -1,0 +1,9 @@
+ axios
+          .post("/experience-tags", params)
+          .then((response) => {
+            console.log("experience tag created", response);
+          })
+          .catch((error) => {
+            console.log("experiences create error", error.response);
+            this.errors = error.response.data.errors;
+          });
