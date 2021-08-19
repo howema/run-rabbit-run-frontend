@@ -4,6 +4,9 @@
       <h1>{{ experience.title }}</h1>
       <img v-bind:src="experience.image" />
       <p>Subtasks: {{ experience.subtasks }}</p>
+      <p>Task 1: {{ experience.task1 }}</p>
+      <p>Task 2: {{ experience.task2 }}</p>
+      <p>Task 3: {{ experience.task3 }}</p>
       <p>Notes: {{ experience.notes }}</p>
       <p></p>
       <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit experience</button></router-link>
@@ -118,28 +121,24 @@ export default {
       });
     },
     createTag: function () {
-      var params = { experience_id: `${this.$route.params.id}`, tag_id: this.value.tag_id };
-      this.value.forEach((item) => {
-        this.item;
-        axios
-          .post("/experience-tags", params)
-          .then((response) => {
-            console.log("experience tag created", response);
-          })
-          .catch((error) => {
-            console.log("experiences create error", error.response);
-            this.errors = error.response.data.errors;
-          });
-        this.value.id.push(item);
-      });
-      // this.$router.push("/experiences");
+      var params = { experience_id: `${this.$route.params.id}` };
+      if (this.value.length > 0) {
+        var newArray = this.value.map((item) => item.id);
+        newArray.forEach((item) => {
+          params["tag_id"] = item;
+          axios
+            .post("/experience-tags", params)
+            .then((response) => {
+              console.log("experience tag created", response);
+            })
+            .catch((error) => {
+              console.log("experiences create error", error.response);
+              this.errors = error.response.data.errors;
+            });
+        });
+        this.$router.push("/experiences");
+      }
     },
-    // strikeThrough: function (text) {
-    //   return text
-    //     .split("")
-    //     .map((char) => char + "\u0336")
-    //     .join("");
-    // },
   },
 };
 </script>
