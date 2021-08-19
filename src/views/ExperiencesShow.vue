@@ -3,18 +3,36 @@
     <div class="container">
       <h1>{{ experience.title }}</h1>
       <img v-bind:src="experience.image" />
-      <p>Subtasks: {{ experience.subtasks }}</p>
-      <p>Task 1: {{ experience.task1 }}</p>
-      <p>Task 2: {{ experience.task2 }}</p>
-      <p>Task 3: {{ experience.task3 }}</p>
-      <p>Notes: {{ experience.notes }}</p>
+      <p>
+        <b>Task 1:</b>
+        {{ experience.task1 }}
+      </p>
+      <p>
+        <b>Task 2:</b>
+        {{ experience.task2 }}
+      </p>
+      <p>
+        <b>Task 3:</b>
+        {{ experience.task3 }}
+      </p>
+      <p>
+        <b>Notes:</b>
+        {{ experience.notes }}
+      </p>
+      <p>
+        <i><b>Tags:</b></i>
+      </p>
+      <div v-for="tag in experience_tags" v-bind:key="tag.id">
+        <i>{{ tag.name }}</i>
+      </div>
       <p></p>
-      <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit experience</button></router-link>
+      <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit Experience</button></router-link>
       <p></p>
-      <div v-for="tag in experience_tags" v-bind:key="tag.id">{{ tag.name }}</div>
+      <p></p>
+      <p></p>
       <div class="example">
         <form v-on:submit.prevent="createTag()">
-          <div class="output">Tags: {{ tag_id }}</div>
+          <!-- <div class="output">{{ tag_id }}</div> -->
 
           <multiselect
             v-model="value"
@@ -38,9 +56,8 @@
         </form>
       </div>
       <p></p>
-      {{ value }}
+      <!-- {{ value }} -->
       <p></p>
-      <router-link to="/experiences">Back to experiences</router-link>
     </div>
     <div v-if="experience.complete == false">
       <form v-on:submit.prevent="updateCheckbox()">
@@ -52,22 +69,9 @@
         <input type="submit" value="Submit" />
       </form>
     </div>
-    <button v-on:click="strikeThrough()">Try it</button>
+    <router-link to="/experiences">Back to experiences</router-link>
   </div>
 </template>
-<!--
-<style>
-.completed {
-  border: 1px solid #eee;
-  border-radius: 2px;
-  padding: 20px 30px;
-  margin-top: 1em;
-  margin-bottom: 40px;
-  user-select: none;
-  overflow-x: auto;
-}
-</style>
--->
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 
 <script>
