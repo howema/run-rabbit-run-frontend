@@ -10,24 +10,79 @@
         <input type="text" v-model="currentExperienceParams.title" />
       </div>
       <div>
-        <label>Task1:</label>
-        <input type="text" v-model="currentExperienceParams.task1" />
-      </div>
-      <div>
-        <label>Task2:</label>
-        <input type="text" v-model="currentExperienceParams.task2" />
-      </div>
-      <div>
-        <label>Task3:</label>
-        <input type="text" v-model="currentExperienceParams.task3" />
-      </div>
-      <div>
         <label>Notes:</label>
         <input type="text" v-model="currentExperienceParams.notes" />
       </div>
+      <p></p>
+      <div>
+        <label>Tall Task 1:</label>
+        <input type="text" v-model="currentExperienceParams.task1" />
+      </div>
+      <div>
+        <label>Teeny Task:</label>
+        <input type="text" v-model="currentExperienceParams.task1a" />
+      </div>
+      <div>
+        <label>Teeny Task:</label>
+        <input type="text" v-model="currentExperienceParams.task1b" />
+      </div>
+      <div>
+        <label>Teeny Task:</label>
+        <input type="text" v-model="currentExperienceParams.task1c" />
+      </div>
+      <p></p>
+      <p></p>
+      <div>
+        <label>Tall Task 2:</label>
+        <input type="text" v-model="currentExperienceParams.task2" />
+      </div>
+      <div>
+        <label>Teeny Task:</label>
+        <input type="text" v-model="currentExperienceParams.task2a" />
+      </div>
+      <div>
+        <label>Teeny Task:</label>
+        <input type="text" v-model="currentExperienceParams.task2b" />
+      </div>
+      <div>
+        <label>Teeny Task:</label>
+        <input type="text" v-model="currentExperienceParams.task2c" />
+      </div>
+      <p></p>
+      <p></p>
+      <div>
+        <label>Tall Task 3:</label>
+        <input type="text" v-model="currentExperienceParams.task3" />
+      </div>
+      <div>
+        <label>Teeny Task:</label>
+        <input type="text" v-model="currentExperienceParams.task3a" />
+      </div>
+      <div>
+        <label>Teeny Task:</label>
+        <input type="text" v-model="currentExperienceParams.task3b" />
+      </div>
+      <div>
+        <label>Teeny Task:</label>
+        <input type="text" v-model="currentExperienceParams.task3c" />
+      </div>
+      <p></p>
+
       <div>
         <label>Image:</label>
         <input type="text" v-model="currentExperienceParams.image" />
+      </div>
+      <div>
+        <label>Timeline:</label>
+        <input type="text" v-model="currentExperienceParams.timeline" />
+      </div>
+      <div>
+        <label>Travel type:</label>
+        <input type="text" v-model="currentExperienceParams.travel_type" />
+      </div>
+      <div>
+        <label>Budget:</label>
+        <input type="text" v-model="currentExperienceParams.budget" />
       </div>
       <input type="submit" value="Submit" />
     </form>
