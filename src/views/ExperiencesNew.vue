@@ -10,8 +10,16 @@
         <input type="text" v-model="newExperienceParams.title" />
       </div>
       <div>
-        <label>Subtasks:</label>
-        <input type="text" v-model="newExperienceParams.subtasks" />
+        <label>Task1:</label>
+        <input type="text" v-model="newExperienceParams.task1" />
+      </div>
+      <div>
+        <label>Task2:</label>
+        <input type="text" v-model="newExperienceParams.task2" />
+      </div>
+      <div>
+        <label>Task3:</label>
+        <input type="text" v-model="newExperienceParams.task3" />
       </div>
       <div>
         <label>Notes:</label>

@@ -3,17 +3,67 @@
     <div class="container">
       <h1>{{ experience.title }}</h1>
       <img v-bind:src="experience.image" />
+
+      <b><u>Task 1:</u></b>
+      {{ experience.task1 }}
+
+      <ol>
+        <b>Teeny tasks:</b>
+        <li>
+          {{ experience.task1a }}
+        </li>
+        <li>
+          {{ experience.task1b }}
+        </li>
+        <li>
+          {{ experience.task1c }}
+        </li>
+      </ol>
+
+      <b><u>Task 2:</u></b>
+      {{ experience.task2 }}
+
+      <ol>
+        <b>Teeny tasks:</b>
+        <li>
+          {{ experience.task2a }}
+        </li>
+        <li>
+          {{ experience.task2b }}
+        </li>
+        <li>
+          {{ experience.task2c }}
+        </li>
+      </ol>
+      <b><u>Task 3:</u></b>
+      {{ experience.task3 }}
+
+      <ol>
+        <b>Teeny tasks:</b>
+        <li>
+          {{ experience.task3a }}
+        </li>
+        <li>
+          {{ experience.task3b }}
+        </li>
+        <li>
+          {{ experience.task3c }}
+        </li>
+      </ol>
+
+      <p></p>
+
       <p>
-        <b>Task 1:</b>
-        {{ experience.task1 }}
+        <b>Timeline:</b>
+        {{ experience.timeline }}
       </p>
       <p>
-        <b>Task 2:</b>
-        {{ experience.task2 }}
+        <b>Travel type:</b>
+        {{ experience.travel_type }}
       </p>
       <p>
-        <b>Task 3:</b>
-        {{ experience.task3 }}
+        <b>Budget:</b>
+        {{ experience.budget }}
       </p>
       <p>
         <b>Notes:</b>
@@ -32,8 +82,6 @@
       <p></p>
       <div class="example">
         <form v-on:submit.prevent="createTag()">
-          <!-- <div class="output">{{ tag_id }}</div> -->
-
           <multiselect
             v-model="value"
             :options="options"
@@ -56,7 +104,6 @@
         </form>
       </div>
       <p></p>
-      <!-- {{ value }} -->
       <p></p>
     </div>
     <div v-if="experience.complete == false">
