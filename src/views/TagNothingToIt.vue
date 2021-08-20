@@ -6,13 +6,15 @@
         <button>But Actually (list of all things there's "nothing to")</button>
       </router-link>
       <div v-for="experience in experiences" v-bind:key="experience.id">
-        <div>
-          <h2>{{ experience.title }}</h2>
-          <img v-bind:src="experience.image" />
-          <p></p>
-          <router-link v-bind:to="`/experiences/${experience.id}`">
-            <small><button type="button" class="btn btn-info">More Info</button></small>
-          </router-link>
+        <div v-if="experience.complete == false">
+          <div>
+            <h2>{{ experience.title }}</h2>
+            <img v-bind:src="experience.image" />
+            <p></p>
+            <router-link v-bind:to="`/experiences/${experience.id}`">
+              <small><button type="button" class="btn btn-info">More Info</button></small>
+            </router-link>
+          </div>
         </div>
       </div>
       <p></p>
