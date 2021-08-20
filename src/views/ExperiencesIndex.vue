@@ -6,6 +6,7 @@
     <div v-for="experience in experiences" v-bind:key="experience.id">
       <div v-if="experience.complete == false">
         <h2>{{ experience.title }}</h2>
+        <!-- <p>{{ experience.notes }}</p> -->
         <p></p>
         <img v-bind:src="experience.image" />
         <p></p>

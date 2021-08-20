@@ -3,6 +3,7 @@
     <div class="container">
       <h1>{{ experience.title }}</h1>
       <img v-bind:src="experience.image" />
+      <p></p>
 
       <b><u>Task 1:</u></b>
       {{ experience.task1 }}
