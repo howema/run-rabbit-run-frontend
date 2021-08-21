@@ -116,7 +116,7 @@ export default {
     updateExperience: function () {
       axios.patch(`/experiences/${this.$route.params.id}`, this.currentExperienceParams).then((response) => {
         console.log(response.data);
-        this.$router.push("/experiences");
+        this.$router.push(`/experiences/${this.$route.params.id}`);
       });
     },
   },

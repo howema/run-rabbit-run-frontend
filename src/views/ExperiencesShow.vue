@@ -188,8 +188,9 @@ export default {
               this.errors = error.response.data.errors;
             });
         });
-        this.$router.push("/experiences");
       }
+      this.$router.push(`/experiences/${this.$route.params.id}`).catch(() => {});
+      this.$router.go();
     },
   },
 };
