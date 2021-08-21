@@ -25,6 +25,8 @@
       <!-- <ul> -->
       <a class="nav-link" href="/experiences">Experiences</a>
       |
+      <a class="nav-link" href="/notepad">Notepad View</a>
+      |
       <!-- </ul> -->
       <!-- <ul v-if="isLoggedIn()"> -->
       <!-- <ul> -->
