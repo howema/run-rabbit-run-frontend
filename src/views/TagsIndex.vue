@@ -1,16 +1,62 @@
 <template>
   <div class="tags-index">
-    <h1>All Tags</h1>
-    <p></p>
-    <router-link to="/just-an-idea"><button>Just An Idea</button></router-link>
-    <router-link to="/face-your-fears"><button>Face Your Fears</button></router-link>
-    <router-link to="/life-milestones"><button>Life Milestones</button></router-link>
-    <div></div>
-    <router-link to="/travel"><button>Travel</button></router-link>
-    <router-link to="/especially-weird"><button>Especially Weird</button></router-link>
-    <router-link to="/nothing-to-it"><button>Nothing To It</button></router-link>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-title" data-aos="zoom-out">
+          <h2>What's Your Mood?</h2>
+          <p>Sort by Tag</p>
+        </div>
 
-    <!-- <img v-bind:src="tag.image" /> -->
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box" data-aos="zoom-in-left">
+              <div class="icon"><i class="bi bi-lightning" style="color: #ff689b"></i></div>
+              <h4 class="title"><a href="/just-an-idea">Just An Idea</a></h4>
+              <p class="description">Description here</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
+              <div class="icon"><i class="bi bi-mic" style="color: #e9bf06"></i></div>
+              <h4 class="title"><a href="/face-your-fears">Face Your Fears</a></h4>
+              <p class="description">Description here</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
+              <div class="icon"><i class="bi bi-house-door" style="color: #3fcdc7"></i></div>
+              <h4 class="title"><a href="/life-milestones">Life Milestones</a></h4>
+              <p class="description">Description here</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">
+              <div class="icon"><i class="bi bi-globe" style="color: #41cf2e"></i></div>
+              <h4 class="title"><a href="/travel">Travel</a></h4>
+              <p class="description">Description here</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="400">
+              <div class="icon"><i class="bi bi-binoculars" style="color: #d6ff22"></i></div>
+              <h4 class="title"><a href="/especially-weird">Especially Weird</a></h4>
+              <p class="description">Description here</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">
+              <div class="icon"><i class="bi bi-check2-circle" style="color: #4680ff"></i></div>
+              <h4 class="title"><a href="/nothing-to-it">Nothing To It</a></h4>
+              <p class="description">Description here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Services Section -->
   </div>
 </template>
 

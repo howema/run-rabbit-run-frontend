@@ -2,7 +2,9 @@
   <div class="notepad-index">
     <div class="container">
       <h1 style="border-bottom: 2px double #000"><u></u></h1>
-      <h1><b>Notepad</b></h1>
+      <h1>
+        <b><i>Notepad</i></b>
+      </h1>
       <h1 style="border-bottom: 2px double #000"><u></u></h1>
       <p></p>
       <div v-for="experience in experiences" v-bind:key="experience.id">
@@ -14,6 +16,7 @@
             <b>{{ experience.title }}</b>
           </u>
         </h1>
+        <h1 style="border-bottom: 1px double #000"><u></u></h1>
         <p>
           <b>Notes:</b>
           {{ experience.notes }}
