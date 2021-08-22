@@ -1,126 +1,184 @@
 <template>
   <div class="experiences-show">
-    <div class="container">
-      <h1>{{ experience.title }}</h1>
-      <img v-bind:src="experience.image" />
-      <p></p>
-
-      <b><u>Task 1:</u></b>
-      {{ experience.task1 }}
-
-      <ol>
-        <b>Teeny tasks:</b>
-        <li>
-          {{ experience.task1a }}
-        </li>
-        <li>
-          {{ experience.task1b }}
-        </li>
-        <li>
-          {{ experience.task1c }}
-        </li>
-      </ol>
-
-      <b><u>Task 2:</u></b>
-      {{ experience.task2 }}
-
-      <ol>
-        <b>Teeny tasks:</b>
-        <li>
-          {{ experience.task2a }}
-        </li>
-        <li>
-          {{ experience.task2b }}
-        </li>
-        <li>
-          {{ experience.task2c }}
-        </li>
-      </ol>
-      <b><u>Task 3:</u></b>
-      {{ experience.task3 }}
-
-      <ol>
-        <b>Teeny tasks:</b>
-        <li>
-          {{ experience.task3a }}
-        </li>
-        <li>
-          {{ experience.task3b }}
-        </li>
-        <li>
-          {{ experience.task3c }}
-        </li>
-      </ol>
-
-      <p></p>
-
-      <p>
-        <b>Timeline:</b>
-        {{ experience.timeline }}
-      </p>
-      <p>
-        <b>Travel type:</b>
-        {{ experience.travel_type }}
-      </p>
-      <p>
-        <b>Budget:</b>
-        {{ experience.budget }}
-      </p>
-      <p>
-        <b>Notes:</b>
-        {{ experience.notes }}
-      </p>
-      <p>
-        <i><b>Tags:</b></i>
-      </p>
-      <div v-for="tag in experience_tags" v-bind:key="tag.id">
-        <i>{{ tag.name }}</i>
-      </div>
-      <p></p>
-      <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit Experience</button></router-link>
-      <p></p>
-      <p></p>
-      <p></p>
-      <div class="example">
-        <form v-on:submit.prevent="createTag()">
-          <multiselect
-            v-model="value"
-            :options="options"
-            :multiple="true"
-            :close-on-select="false"
-            :clear-on-select="false"
-            :preserve-search="true"
-            placeholder="Choose tags"
-            label="name"
-            track-by="name"
-            :preselect-first="true"
-          >
-            <template slot="selection" slot-scope="{ values, search, isOpen }">
-              <span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">
-                {{ values.length }} options selected
-              </span>
-            </template>
-          </multiselect>
-          <input type="submit" value="Add Tags" />
-        </form>
-      </div>
-      <p></p>
-      <p></p>
-    </div>
-    <div v-if="experience.complete == false">
-      <form v-on:submit.prevent="updateCheckbox()">
-        <div id="v-model-checkbox" class="completed">
-          <input type="checkbox" id="checkbox" v-model="checked" />
-          <label for="checkbox">{{ "Complete?" }}</label>
-          <p></p>
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>{{ experience.title }}</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>Details</li>
+          </ol>
         </div>
-        <input type="submit" value="Submit" />
-      </form>
+      </div>
+    </section>
+    <!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img v-bind:src="experience.image" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>General</h3>
+              <ul>
+                <li>
+                  <strong>Notes:</strong>
+                  {{ experience.notes }}
+                </li>
+                <li>
+                  <strong>Travel Type</strong>
+                  : {{ experience.travel_type }}
+                </li>
+                <li>
+                  <strong>Timeline</strong>
+                  : {{ experience.timeline }}
+                </li>
+                <li>
+                  <strong>Budget</strong>
+                  : {{ experience.budget }}
+                </li>
+
+                <li>
+                  <strong>Tags</strong>
+                  :
+                  <div class="tags">
+                    <div v-for="tag in experience_tags" v-bind:key="tag.id">
+                      <i>{{ tag.name }}</i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Stepping Stones</h3>
+              <ul>
+                <li>
+                  <strong>Step 1:</strong>
+                  {{ experience.task1 }}
+                </li>
+                <li>
+                  <ol>
+                    <li>
+                      {{ experience.task1a }}
+                    </li>
+                    <li>
+                      {{ experience.task1b }}
+                    </li>
+                    <li>
+                      {{ experience.task1c }}
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <strong>Step 2:</strong>
+                  {{ experience.task2 }}
+                </li>
+                <li>
+                  <ol>
+                    <li>
+                      {{ experience.task2a }}
+                    </li>
+                    <li>
+                      {{ experience.task2b }}
+                    </li>
+                    <li>
+                      {{ experience.task2c }}
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <strong>Step 3:</strong>
+                  {{ experience.task3 }}
+                </li>
+                <li>
+                  <ol>
+                    <li>
+                      {{ experience.task3a }}
+                    </li>
+                    <li>
+                      {{ experience.task3b }}
+                    </li>
+                    <li>
+                      {{ experience.task3c }}
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="example">
+            <h3><strong>Add Some Tags</strong></h3>
+            <form v-on:submit.prevent="createTag()">
+              <multiselect
+                v-model="value"
+                :options="options"
+                :multiple="true"
+                :close-on-select="false"
+                :clear-on-select="false"
+                :preserve-search="true"
+                placeholder="Select Tags For This Experience"
+                label="name"
+                track-by="name"
+                :preselect-first="true"
+              >
+                <template slot="selection" slot-scope="{ values, search, isOpen }">
+                  <span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">
+                    {{ values.length }} options selected
+                  </span>
+                </template>
+              </multiselect>
+              <input type="submit" value="Add Tags" />
+            </form>
+          </div>
+          <p></p>
+          <div class="bucket-push">
+            <h3><strong>Complete? Add it to Your Bucket!</strong></h3>
+            <div v-if="experience.complete == false">
+              <form v-on:submit.prevent="updateCheckbox()">
+                <div id="v-model-checkbox" class="completed">
+                  <input type="checkbox" id="checkbox" v-model="checked" />
+                  <label for="checkbox">Yeah!</label>
+                  <p></p>
+                  <input type="submit" value="Bucket!" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Portfolio Details Section -->
+    <div class="container">
+      <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit Details</button></router-link>
+      <p></p>
+      <p></p>
+      <router-link to="/experiences">Back to All</router-link>
+
+      <p></p>
+      <p></p>
     </div>
-    <router-link to="/experiences">Back to experiences</router-link>
   </div>
 </template>
-<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+<style src="vue-multiselect/dist/vue-multiselect.min.css">
+.tags {
+  /* display: inline-block; */
+  display: table;
+}
+</style>
 
 <script>
 import axios from "axios";
