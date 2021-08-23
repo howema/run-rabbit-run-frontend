@@ -29,7 +29,7 @@
                 <ul>
                   <li><a href="/notepad">Notepad View</a></li>
 
-                  <li><a href="/experiences/new">Add A New Experience</a></li>
+                  <li><a href="/experiences/new">Add an Experience</a></li>
                 </ul>
               </li>
             </ul>
@@ -43,48 +43,6 @@
         <!-- .navbar -->
       </div>
     </header>
-    <!-- End Header -->
-    <!-- <div id="nav"> -->
-    <!-- <ul>
-      |
-      <router-link to="/welcome">Welcome</router-link>
-      | -->
-    <!-- </ul> -->
-    <!-- <ul v-if="isLoggedIn()"> -->
-    <!-- <ul> -->
-    <!-- <router-link to="/">Home</router-link>
-      | -->
-    <!-- </ul> -->
-    <!-- <ul v-if="!isLoggedIn()"> -->
-    <!-- <ul> -->
-    <!-- <a class="nav-link" href="/signup">Sign-up</a>
-      | -->
-    <!-- </ul> -->
-    <!-- <ul v-if="!isLoggedIn()"> -->
-    <!-- <ul> -->
-    <!-- <a class="nav-link" href="/login">Login</a>
-      | -->
-    <!-- </ul> -->
-    <!-- <ul v-if="isLoggedIn()"> -->
-    <!-- <ul> -->
-    <!-- <a class="nav-link" href="/experiences">Experiences</a>
-      |
-      <a class="nav-link" href="/notepad">Notepad View</a>
-      | -->
-    <!-- </ul> -->
-    <!-- <ul v-if="isLoggedIn()"> -->
-    <!-- <ul> -->
-    <!-- <a class="nav-link" href="/tags">Tags</a>
-      |
-      <a class="nav-link" href="/bucket">Bucket</a>
-      | -->
-    <!-- </ul> -->
-    <!-- <ul v-if="isLoggedIn()"> -->
-    <!-- <ul> -->
-    <!-- <a class="nav-link" href="/logout">Logout</a>
-      | -->
-    <!-- </ul> -->
-    <!-- </div> -->
     <router-view />
     <!-- ======= Footer ======= -->
     <footer id="footer">

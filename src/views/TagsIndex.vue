@@ -1,6 +1,10 @@
 <template>
   <div class="tags-index">
     <!-- ======= Services Section ======= -->
+    <h1></h1>
+    <h2></h2>
+    <h1></h1>
+
     <section id="services" class="services">
       <div class="container">
         <div class="section-title" data-aos="zoom-out">
