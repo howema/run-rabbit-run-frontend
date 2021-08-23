@@ -7,7 +7,6 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">
-            Welcome to
             <span>Run Rabbit Run</span>
           </h2>
           <p class="animate__animated fanimate__adeInUp">
@@ -19,7 +18,7 @@
         </div>
       </div>
       <!-- Slide 2 -->
-      <div class="carousel-item">
+      <!-- <div class="carousel-item">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
           <p class="animate__animated animate__fadeInUp">
@@ -29,9 +28,9 @@
           </p>
           <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
         </div>
-      </div>
+      </div> -->
       <!-- Slide 3 -->
-      <div class="carousel-item">
+      <!-- <div class="carousel-item">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
           <p class="animate__animated animate__fadeInUp">
@@ -41,7 +40,7 @@
           </p>
           <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
         </div>
-      </div>
+      </div> -->
 
       <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
