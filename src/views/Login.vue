@@ -1,20 +1,57 @@
 <template>
-  <div class="login">
-    <form v-on:submit.prevent="submit()">
-      <h1>Login</h1>
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      <div>
-        <label>Email:</label>
-        <input type="email" v-model="newSessionParams.email" />
+  <div>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="signup">
+          <!-- <div class="section-title" data-aos="zoom-out"> -->
+          <!-- <h2>Signup</h2>
+          <p>Join Us</p> -->
+        </div>
+
+        <div class="container">
+          <div class="section-title" data-aos="zoom-out">
+            <h2></h2>
+            <p>Login</p>
+            <div class="row justify-content-lg-center">
+              <div class="col-md-auto" data-aos="fade-left">
+                <form v-on:submit.prevent="submit()" method="post" role="form" class="php-email-form">
+                  <div class="row">
+                    <div class="form-group mt-3">
+                      <input
+                        type="email"
+                        v-model="newSessionParams.email"
+                        class="form-control"
+                        name="email"
+                        id="email"
+                        placeholder="Your Email"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group mt-3">
+                    <input
+                      type="password"
+                      v-model="newSessionParams.password"
+                      class="form-control"
+                      name="password"
+                      id="password"
+                      placeholder="Password"
+                      required
+                    />
+                  </div>
+
+                  <div class="text-center"><button type="submit">Log In!</button></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" v-model="newSessionParams.password" />
-      </div>
-      <input type="submit" value="Submit" />
-    </form>
+      <!-- </div> -->
+    </section>
+    <!-- End Contact Section -->
   </div>
 </template>
 
