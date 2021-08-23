@@ -218,6 +218,7 @@
                   </div>
                   <div class="text-center"><button type="submit">Submit Changes</button></div>
                 </form>
+                <button v-on:click="destroyExperience()">Delete</button>
               </div>
             </div>
           </div>
@@ -226,8 +227,6 @@
       <!-- </div> -->
     </section>
     <!-- End Create Section -->
-
-    <button v-on:click="destroyExperience()">Delete</button>
   </div>
 </template>
 
