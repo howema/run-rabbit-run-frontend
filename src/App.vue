@@ -47,16 +47,16 @@
     <!-- ======= Footer ======= -->
     <footer id="footer">
       <div class="container">
-        <h3>Run Rabbit Run</h3>
-        <p>
-          Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.
-        </p>
+        <h4>Run Rabbit Run</h4>
+        <p>An inappropriately casual approach to life.</p>
         <div class="social-links">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
           <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+          <a href="https://mhowe.dev" class="google-plus"><i class="bx-rss"></i></a>
+          <a href="https://www.linkedin.com/in/meg-howe-6b4216207/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/howema" class="linkedin"><i class="bx bxl-github"></i></a>
         </div>
         <div class="copyright">
           &copy; Copyright
