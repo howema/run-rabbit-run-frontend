@@ -19,13 +19,12 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-8">
+            <img v-bind:src="experience.image" />
             <div class="portfolio-details-slider swiper-container">
               <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide">
-                  <img v-bind:src="experience.image" />
-                </div>
+                <div class="swiper-slide"></div>
               </div>
-              <div class="swiper-pagination"></div>
+              <!-- <div class="swiper-pagination"></div> -->
             </div>
           </div>
 
