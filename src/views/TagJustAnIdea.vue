@@ -23,24 +23,40 @@
                 </div>
               </div>
             </div>
+            <!-- ======= Solid Button Section ======= -->
+            <!-- <section id="pricing" class="pricing">
+              <div class="col-lg-3 col-md-6">
+                <div class="btn-wrap">
+                  <a href="/tags" class="btn-buy">Back to Tags</a>
+                </div>
+              </div>
+            </section> -->
+            <!-- End Solid Button Section -->
+            <!-- ======= Outline Button Section ======= -->
+            <section id="about" class="about">
+              <div class="container">
+                <div class="row content" data-aos="fade-up">
+                  <div class="move">
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                      <a href="/tags" class="btn-learn-more">Back to Tags</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End Outline Button Section -->
           </div>
         </div>
-        <!-- ======= Solid Button Section ======= -->
-        <section id="cta" class="cta">
-          <div class="container">
-            <div class="row" data-aos="zoom-out">
-              <div class="col-lg-9 text-center text-lg-start"></div>
-              <div class="col-lg-3 cta-btn-container text-center">
-                <a class="cta-btn align-middle" href="#">Call To Action</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- End Solid Button Section -->
       </div>
     </section>
   </div>
 </template>
+
+<style>
+/* .move {
+  float: right;
+} */
+</style>
 
 <script>
 import axios from "axios";

@@ -24,6 +24,19 @@
                   </div>
                 </div>
               </div>
+              <!-- ======= Outline Button Section ======= -->
+              <section id="about" class="about">
+                <div class="container">
+                  <div class="row content" data-aos="fade-up">
+                    <div class="move">
+                      <div class="col-lg-6 pt-4 pt-lg-0">
+                        <a href="/tags" class="btn-learn-more">Back to Tags</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- End Outline Button Section -->
             </div>
           </div>
         </div>

@@ -31,7 +31,7 @@
           </div>
           <!-- <router-link to="/experiences/new"><button>Add an Experience</button></router-link> -->
 
-          <!-- ======= Button Section ======= -->
+          <!-- ======= Outline Button Section ======= -->
           <section id="about" class="about">
             <div class="container">
               <div class="row content" data-aos="fade-up">
@@ -42,7 +42,7 @@
               </div>
             </div>
           </section>
-          <!-- End Button Section -->
+          <!-- End Outline Button Section -->
         </div>
         <!-- </div> -->
       </section>
