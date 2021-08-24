@@ -1,55 +1,59 @@
 <template>
   <div class="nothing-to-it-tag">
-    <section id="portfolio" class="portfolio">
+    <section id="services" class="services">
       <div class="container">
-        <div class="section-title" data-aos="zoom-out">
-          <h1><i>#NothingToIt</i></h1>
-          <div class="row">
-            <div v-for="experience in experiences" v-bind:key="experience.id" class="col-3">
-              <div class="portfolio-item filter-card">
-                <div class="portfolio-img">
-                  <a
-                    href="assets/img/portfolio/portfolio-4.jpg"
-                    data-gallery="portfolioGallery"
-                    class="portfolio-lightbox preview-link"
-                    title="Card 2"
-                  ></a>
-                  <router-link v-bind:to="`/experiences/${experience.id}`">
-                    <div class="portfolio-img">
-                      <img v-bind:src="experience.image" class="img-fluid" alt="" />
-                    </div>
-                    <h5>{{ experience.title }}</h5>
-                  </router-link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- ======= Outline Button Section ======= -->
-        <section id="about" class="about">
+        <section id="portfolio" class="portfolio">
           <div class="container">
-            <div class="row content" data-aos="fade-up">
-              <div class="move">
-                <div class="col-lg-6 pt-4 pt-lg-0">
-                  <a href="/tags" class="btn-learn-more">Back to Tags</a>
+            <div class="section-title" data-aos="zoom-out">
+              <h1><i>#NothingToIt</i></h1>
+              <div class="row">
+                <div v-for="experience in experiences" v-bind:key="experience.id" class="col-3">
+                  <div class="portfolio-item filter-card">
+                    <div class="portfolio-img">
+                      <a
+                        href="assets/img/portfolio/portfolio-4.jpg"
+                        data-gallery="portfolioGallery"
+                        class="portfolio-lightbox preview-link"
+                        title="Card 2"
+                      ></a>
+                      <router-link v-bind:to="`/experiences/${experience.id}`">
+                        <div class="portfolio-img">
+                          <img v-bind:src="experience.image" class="img-fluid" alt="" />
+                        </div>
+                        <h5>{{ experience.title }}</h5>
+                      </router-link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <!-- End Outline Button Section -->
-        <!-- ======= Solid Button Section ======= -->
-        <!-- <section id="pricing" class="pricing">
+            <!-- ======= Outline Button Section ======= -->
+            <section id="about" class="about">
+              <div class="container">
+                <div class="row content" data-aos="fade-up">
+                  <div class="move">
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                      <a href="/tags" class="btn-learn-more">Back to Tags</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End Outline Button Section -->
+            <!-- ======= Solid Button Section ======= -->
+            <!-- <section id="pricing" class="pricing">
           <div class="col-lg-3 col-md-6">
             <div class="btn-wrap">
               <a href="/experiences" class="btn-buy">But Actually (list of all things there's "nothing to")</a>
             </div>
           </div>
         </section> -->
-        <!-- End Solid Button Section -->
-        <router-link to="/experiences">
-          <button>But Actually (list of all things there's "nothing to")</button>
-        </router-link>
+            <!-- End Solid Button Section -->
+            <router-link to="/experiences">
+              <button>But Actually (list of all things there's "nothing to")</button>
+            </router-link>
+          </div>
+        </section>
       </div>
     </section>
   </div>
