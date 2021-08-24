@@ -94,8 +94,8 @@
         <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit Experience</button></router-link>
         <p></p>
       </div>
+      <router-link to="/experiences">Back to experiences</router-link>
     </div>
-    <router-link to="/experiences">Back to experiences</router-link>
   </div>
 </template>
 

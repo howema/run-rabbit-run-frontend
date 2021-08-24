@@ -29,10 +29,23 @@
               </div>
             </div>
           </div>
+          <!-- <router-link to="/experiences/new"><button>Add an Experience</button></router-link> -->
+
+          <!-- ======= Button Section ======= -->
+          <section id="about" class="about">
+            <div class="container">
+              <div class="row content" data-aos="fade-up">
+                <!-- <div class="col-lg-6"></div> -->
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                  <a href="/experiences/new" class="btn-learn-more">Add Experience</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Button Section -->
         </div>
         <!-- </div> -->
       </section>
-      <router-link to="/experiences/new"><button>Add an Experience</button></router-link>
     </div>
   </div>
 </template>
