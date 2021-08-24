@@ -1,23 +1,33 @@
 <template>
   <div class="travel-tag">
-    <div class="container">
-      <h1><i>#Travel</i></h1>
-      <div v-for="experience in experiences" v-bind:key="experience.id">
-        <div v-if="experience.complete == false">
-          <div>
-            <h2>{{ experience.title }}</h2>
-            <img v-bind:src="experience.image" />
-            <p></p>
-            <router-link v-bind:to="`/experiences/${experience.id}`">
-              <small><button type="button" class="btn btn-info">More Info</button></small>
-            </router-link>
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-title" data-aos="zoom-out">
+          <h1><i>#Travel</i></h1>
+          <div class="row">
+            <div v-for="experience in experiences" v-bind:key="experience.id" class="col-3">
+              <div class="portfolio-item filter-card">
+                <div class="portfolio-img">
+                  <a
+                    href="assets/img/portfolio/portfolio-4.jpg"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox preview-link"
+                    title="Card 2"
+                  ></a>
+                  <router-link v-bind:to="`/experiences/${experience.id}`">
+                    <div class="portfolio-img">
+                      <img v-bind:src="experience.image" class="img-fluid" alt="" />
+                    </div>
+                    <h5>{{ experience.title }}</h5>
+                  </router-link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <p></p>
-      <p></p>
-      <router-link to="/tags">Back to Tags</router-link>
-    </div>
+    </section>
+    <router-link to="/tags">Back to Tags</router-link>
   </div>
 </template>
 

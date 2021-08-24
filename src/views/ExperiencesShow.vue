@@ -145,8 +145,8 @@
           </div>
           <p></p>
           <div class="bucket-push">
-            <h3><strong>Complete? Add it to Your Bucket!</strong></h3>
             <div v-if="experience.complete == false">
+              <h3><strong>Complete? Add it to Your Bucket!</strong></h3>
               <form v-on:submit.prevent="updateCheckbox()">
                 <div id="v-model-checkbox" class="completed">
                   <input type="checkbox" id="checkbox" v-model="checked" />
