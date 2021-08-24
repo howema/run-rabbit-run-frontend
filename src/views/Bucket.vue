@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     indexExperiences: function () {
-      axios.get("/experiences").then((response) => {
+      axios.get("/experiences-true").then((response) => {
         console.log("experiences index", response.data);
         this.experiences = response.data;
         console.log(this.experiences);

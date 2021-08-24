@@ -23,14 +23,14 @@
                     <div class="portfolio-img">
                       <img v-bind:src="experience.image" class="img-fluid" alt="" />
                     </div>
-                    <h3>{{ experience.title }}</h3>
+                    <h5>{{ experience.title }}</h5>
                   </router-link>
                 </div>
               </div>
-              <!-- </div> -->
             </div>
           </div>
         </div>
+        <!-- </div> -->
       </section>
       <router-link to="/experiences/new"><button>Add an Experience</button></router-link>
     </div>
