@@ -11,9 +11,9 @@
               <span>Run Rabbit Run</span>
             </h2>
             <p class="animate__animated fanimate__adeInUp">
-              <i>Welcome {{ user.name }} to your homepage!</i>
+              <!-- <i>Welcome {{ user.name }} to your homepage!</i>
               Your source for all things...something. I know your fav thing is {{ user.favorite_thing }}. Good news!
-              This app tastes like {{ user.favorite_thing }}.
+              This app tastes like {{ user.favorite_thing }}. -->
             </p>
             <a href="/about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
           </div>
