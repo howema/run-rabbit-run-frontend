@@ -33,7 +33,7 @@
                 </ul>
               </li>
             </ul>
-            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
             <ul v-if="isLoggedIn()">
               <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
             </ul>
