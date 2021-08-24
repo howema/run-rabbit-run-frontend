@@ -5,9 +5,9 @@
         <section id="portfolio" class="portfolio">
           <div class="container">
             <div class="section-title" data-aos="zoom-out">
+              <h2></h2>
+              <p>WELCOME TO YOUR Bucket</p>
               <h1>
-                Welcome to your Bucket.
-                <p></p>
                 <i>Make sure it's full.</i>
               </h1>
               <div class="row">
