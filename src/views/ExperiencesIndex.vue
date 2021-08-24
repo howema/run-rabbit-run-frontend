@@ -10,7 +10,7 @@
 
           <div class="row">
             <!-- <div class="columns is-multiline"> -->
-            <div v-for="experience in experiences" v-bind:key="experience.id" class="col-6">
+            <div v-for="experience in experiences" v-bind:key="experience.id" class="col-3">
               <div v-if="experience.complete == false">
                 <!-- <div class="card" style="width: 19rem"> -->
                 <router-link v-bind:to="`/experiences/${experience.id}`">
