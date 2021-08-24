@@ -2,32 +2,33 @@
   <div class="notepad-index">
     <section id="services" class="services">
       <div class="container">
-        <div class="container">
-          <h1 style="border-bottom: 2px double #000"><u></u></h1>
-          <h1>
-            <b><i>Notepad</i></b>
-          </h1>
-          <h1 style="border-bottom: 2px double #000"><u></u></h1>
-          <p></p>
-          <div v-for="experience in experiences" v-bind:key="experience.id">
-            <p></p>
-            <h1 style="border-bottom: 1px double #000"><u></u></h1>
-
+        <section id="services" class="services">
+          <div class="container">
+            <h1 style="border-bottom: 2px double #000"><u></u></h1>
             <h1>
-              <u>
-                <b>{{ experience.title }}</b>
-              </u>
+              <b><i>Notepad</i></b>
             </h1>
-            <h1 style="border-bottom: 1px double #000"><u></u></h1>
-            <p>
-              <b>Notes:</b>
-              {{ experience.notes }}
-            </p>
+            <h1 style="border-bottom: 2px double #000"><u></u></h1>
+            <p></p>
+            <div v-for="experience in experiences" v-bind:key="experience.id">
+              <p></p>
+              <h1 style="border-bottom: 1px double #000"><u></u></h1>
 
-            <b><u>Task 1:</u></b>
-            {{ experience.task1 }}
+              <h1>
+                <u>
+                  <b>{{ experience.title }}</b>
+                </u>
+              </h1>
+              <h1 style="border-bottom: 1px double #000"><u></u></h1>
+              <p>
+                <b>Notes:</b>
+                {{ experience.notes }}
+              </p>
 
-            <!-- <ol>
+              <b><u>Task 1:</u></b>
+              {{ experience.task1 }}
+
+              <!-- <ol>
           <b>Teeny tasks:</b>
           <li>
             {{ experience.task1a }}
@@ -39,11 +40,11 @@
             {{ experience.task1c }}
           </li>
         </ol> -->
-            <p></p>
-            <b><u>Task 2:</u></b>
-            {{ experience.task2 }}
+              <p></p>
+              <b><u>Task 2:</u></b>
+              {{ experience.task2 }}
 
-            <!-- <ol>
+              <!-- <ol>
           <b>Teeny tasks:</b>
           <li>
             {{ experience.task2a }}
@@ -55,11 +56,11 @@
             {{ experience.task2c }}
           </li>
         </ol> -->
-            <p></p>
-            <b><u>Task 3:</u></b>
-            {{ experience.task3 }}
+              <p></p>
+              <b><u>Task 3:</u></b>
+              {{ experience.task3 }}
 
-            <!-- <ol>
+              <!-- <ol>
           <b>Teeny tasks:</b>
           <li>
             {{ experience.task3a }}
@@ -72,32 +73,35 @@
           </li>
         </ol> -->
 
-            <p></p>
+              <p></p>
 
-            <p>
-              <b>Timeline:</b>
-              {{ experience.timeline }}
-            </p>
-            <p>
-              <b>Travel type:</b>
-              {{ experience.travel_type }}
-            </p>
-            <p>
-              <b>Budget:</b>
-              {{ experience.budget }}
-            </p>
-            <p>
-              <i><b>Tags:</b></i>
-            </p>
-            <div v-for="tag in experience_tags" v-bind:key="tag.id">
-              <i>{{ tag.name }}</i>
+              <p>
+                <b>Timeline:</b>
+                {{ experience.timeline }}
+              </p>
+              <p>
+                <b>Travel type:</b>
+                {{ experience.travel_type }}
+              </p>
+              <p>
+                <b>Budget:</b>
+                {{ experience.budget }}
+              </p>
+              <p>
+                <i><b>Tags:</b></i>
+              </p>
+              <div v-for="tag in experience_tags" v-bind:key="tag.id">
+                <i>{{ tag.name }}</i>
+              </div>
+              <p></p>
+              <router-link v-bind:to="`/experiences/${experience.id}/edit`">
+                <button>Edit Experience</button>
+              </router-link>
+              <p></p>
             </div>
-            <p></p>
-            <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit Experience</button></router-link>
-            <p></p>
+            <router-link to="/experiences">Back to experiences</router-link>
           </div>
-          <router-link to="/experiences">Back to experiences</router-link>
-        </div>
+        </section>
       </div>
     </section>
   </div>
