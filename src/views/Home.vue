@@ -17,37 +17,37 @@
               carrots.
             </p>
             <p>Run Rabbit, Run.</p>
-            <!-- <i>Welcome {{ user.name }} to your homepage!</i>
-              Your source for all things...something. I know your fav thing is {{ user.favorite_thing }}. Good news!
-              This app tastes like {{ user.favorite_thing }}. -->
 
-            <a href="/about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            <a href="/experiences/new" class="btn-get-started animate__animated animate__fadeInUp scrollto">
+              Start Here
+            </a>
           </div>
         </div>
         <!-- Slide 2 -->
         <div class="carousel-item">
           <div class="carousel-container">
-            <h2 class="animate__animated animate__fadeInDown"><i>For Pipedreams and Daydreams</i></h2>
+            <h2 class="animate__animated animate__fadeInDown"><i>"For Pipedreams and Daydreams"</i></h2>
             <p class="animate__animated animate__fadeInUp">
               Take your ludicrous longings and transform them into reasonable requests! Cheers to both fleeting thrills
               and enduring success. It’s our “problem-free philosophy.” It’s our “Pinterest for Bucket List.” It’s: “An
               inappropriately casual approach to life.”
             </p>
-            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            <a href="/tags" class="btn-get-started animate__animated animate__fadeInUp scrollto">What's Your Mood?</a>
           </div>
         </div>
         <!-- Slide 3 -->
-        <!-- <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-          <p class="animate__animated animate__fadeInUp">
-            Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam.
-            Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
-            vel. Minus et tempore modi architecto.
-          </p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown"><i>"The Flavor Overtaking the Nation"</i></h2>
+            <p class="animate__animated animate__fadeInUp">
+              Okay {{ user.name }}, we know your favorite thing is {{ user.favorite_thing }}. Unfortunately, life isn't
+              all {{ user.favorite_thing }} and roses - as they say. It's time to get out more. To spread your wings and
+              fly. Time to work toward your goals. Good news! Our clinical research tells us that success tastes like
+              {{ user.favorite_thing }}. So there's that to look forward to.
+            </p>
+            <a href="/notepad" class="btn-get-started animate__animated animate__fadeInUp scrollto">Notepad</a>
+          </div>
         </div>
-      </div> -->
 
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
