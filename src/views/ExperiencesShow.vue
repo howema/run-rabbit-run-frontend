@@ -17,8 +17,18 @@
     <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
+        <div class="container">
+          <div class="section-title" data-aos="zoom-out">
+            <section id="portfolio" class="portfolio">
+              <div class="container">
+                <h2>Details</h2>
+                <p>{{ experience.title }}</p>
+              </div>
+            </section>
+          </div>
+        </div>
         <div class="row gy-4">
-          <div class="col-lg-8">
+          <div class="col-lg-4">
             <img v-bind:src="experience.image" />
             <div class="portfolio-details-slider swiper-container">
               <div class="swiper-wrapper align-items-center">
@@ -119,6 +129,76 @@
               </ul>
             </div>
           </div>
+
+          <!-- ======= Pricing Section ======= -->
+          <section id="pricing" class="pricing">
+            <div class="container">
+              <div class="section-title" data-aos="zoom-out">
+                <h2>Pricing</h2>
+                <p>Our Competing Prices</p>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-3 col-md-6">
+                  <div class="box" data-aos="zoom-in">
+                    <h3>Free</h3>
+                    <h4>
+                      <sup>$</sup>
+                      0
+                      <span>/ month</span>
+                    </h4>
+                    <ul>
+                      <li>Aida dere</li>
+                      <li>Nec feugiat nisl</li>
+                      <li>Nulla at volutpat dola</li>
+                      <li class="na">Pharetra massa</li>
+                      <li class="na">Massa ultricies mi</li>
+                    </ul>
+                    <div class="btn-wrap">
+                      <a href="#" class="btn-buy">Buy Now</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+                  <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>Add Tags!</h3>
+                    <h4></h4>
+                    <ul>
+                      <form v-on:submit.prevent="createTag()">
+                        <multiselect
+                          v-model="value"
+                          :options="options"
+                          :multiple="true"
+                          :close-on-select="false"
+                          :clear-on-select="false"
+                          :preserve-search="true"
+                          placeholder="Select Tags For This Experience"
+                          label="name"
+                          track-by="name"
+                          :preselect-first="true"
+                        >
+                          <template slot="selection" slot-scope="{ values, search, isOpen }">
+                            <span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">
+                              {{ values.length }} options selected
+                            </span>
+                          </template>
+                        </multiselect>
+                        <input type="submit" value="Add Tags" />
+                      </form>
+
+                      <li class="na">Massa ultricies mi</li>
+                    </ul>
+                    <div class="btn-wrap">
+                      <a href="#" class="btn-buy">Buy Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Pricing Section -->
+
           <div class="example">
             <h3><strong>Add Some Tags</strong></h3>
             <form v-on:submit.prevent="createTag()">

@@ -67,10 +67,17 @@ export default {
     indexExperiences: function () {
       axios.get("/tags/5" + this.$route.params.id).then((response) => {
         this.tag = response.data;
-        let experiences = response.data.experiences;
+        let allExperiences = response.data.experiences;
+        let userExperiences = [];
         console.log(response.data.experiences);
-        experiences.map((experience) => {
+        allExperiences.map((experience) => {
           if (experience.user_id == this.current_user_id) {
+            userExperiences.push(experience);
+          }
+        });
+        console.log(this.userExperiences);
+        userExperiences.map((experience) => {
+          if (experience.complete == false) {
             this.experiences.push(experience);
           }
         });
