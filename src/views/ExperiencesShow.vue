@@ -71,6 +71,7 @@
               </ul>
             </div>
           </div>
+
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Stepping Stones</h3>
@@ -129,43 +130,61 @@
               </ul>
             </div>
           </div>
-
-          <div class="example">
-            <h3><strong>Add Some Tags</strong></h3>
-            <form v-on:submit.prevent="createTag()">
-              <multiselect
-                v-model="value"
-                :options="options"
-                :multiple="true"
-                :close-on-select="false"
-                :clear-on-select="false"
-                :preserve-search="true"
-                placeholder="Select Tags For This Experience"
-                label="name"
-                track-by="name"
-                :preselect-first="true"
-              >
-                <template slot="selection" slot-scope="{ values, search, isOpen }">
-                  <span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">
-                    {{ values.length }} options selected
-                  </span>
-                </template>
-              </multiselect>
-              <input type="submit" value="Add Tags" />
-            </form>
-          </div>
-          <p></p>
-          <div class="bucket-push">
-            <div v-if="experience.complete == false">
-              <h3><strong>Complete? Add it to Your Bucket!</strong></h3>
-              <form v-on:submit.prevent="updateCheckbox()">
-                <div id="v-model-checkbox" class="completed">
-                  <input type="checkbox" id="checkbox" v-model="checked" />
-                  <label for="checkbox">Yeah!</label>
-                  <p></p>
-                  <input type="submit" value="Bucket!" />
-                </div>
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Add Some Tags</h3>
+              <form v-on:submit.prevent="createTag()">
+                <multiselect
+                  v-model="value"
+                  :options="options"
+                  :multiple="true"
+                  :close-on-select="false"
+                  :clear-on-select="false"
+                  :preserve-search="true"
+                  placeholder="Select Tags For This Experience"
+                  label="name"
+                  track-by="name"
+                  :preselect-first="true"
+                >
+                  <template slot="selection" slot-scope="{ values, search, isOpen }">
+                    <span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">
+                      {{ values.length }} options selected
+                    </span>
+                  </template>
+                </multiselect>
+                <input type="submit" value="Add Tags" />
               </form>
+            </div>
+            <!-- ======= Outline Button Section ======= -->
+            <section id="about" class="about">
+              <div class="container">
+                <div class="row content" data-aos="fade-up">
+                  <div class="col-lg-6 pt-4 pt-lg-0">
+                    <router-link v-bind:to="`/experiences/${experience.id}/edit`" class="btn-learn-more">
+                      Edit Details
+                    </router-link>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End Outline Button Section -->
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <div class="bucket-push">
+                <div v-if="experience.complete == false">
+                  <h3><strong>Complete? Add it to Your Bucket!</strong></h3>
+                  <form v-on:submit.prevent="updateCheckbox()">
+                    <div id="v-model-checkbox" class="completed">
+                      <input type="checkbox" id="checkbox" v-model="checked" />
+                      <label for="checkbox">Yeah!</label>
+                      <p></p>
+                      <input type="submit" value="Bucket!" />
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -173,7 +192,6 @@
     </section>
     <!-- End Portfolio Details Section -->
     <div class="container">
-      <router-link v-bind:to="`/experiences/${experience.id}/edit`"><button>Edit Details</button></router-link>
       <p></p>
       <p></p>
       <router-link to="/experiences">Back to All</router-link>
