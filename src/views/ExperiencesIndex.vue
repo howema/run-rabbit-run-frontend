@@ -6,7 +6,7 @@
           <section id="portfolio" class="portfolio">
             <div class="container">
               <div class="section-title" data-aos="zoom-out">
-                <h2></h2>
+                <h2>All Bucket List Items</h2>
                 <p>All Experiences</p>
               </div>
 

@@ -10,7 +10,7 @@
         <section id="portfolio" class="portfolio">
           <div class="container">
             <div class="section-title" data-aos="zoom-out">
-              <h2></h2>
+              <h2>What's Your Mood?</h2>
               <p>Sort by Tag</p>
             </div>
 
