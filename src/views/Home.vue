@@ -11,25 +11,31 @@
               <span>Run Rabbit Run</span>
             </h2>
             <p class="animate__animated fanimate__adeInUp">
-              <!-- <i>Welcome {{ user.name }} to your homepage!</i>
+              Welcome {{ user.name }}, to your own personal utopia. Adventure is just down the street. Play life in
+              sandbox mode. Plan your gap year, delay the real world, or leave it entirely. An app for seasonal workers,
+              digital nomads, and flighty fools. For your neighbor and for your sister. For all the bunnies chasing
+              carrots.
+            </p>
+            <p>Run Rabbit, Run.</p>
+            <!-- <i>Welcome {{ user.name }} to your homepage!</i>
               Your source for all things...something. I know your fav thing is {{ user.favorite_thing }}. Good news!
               This app tastes like {{ user.favorite_thing }}. -->
-            </p>
+
             <a href="/about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
           </div>
         </div>
         <!-- Slide 2 -->
-        <!-- <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-          <p class="animate__animated animate__fadeInUp">
-            Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam.
-            Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
-            vel. Minus et tempore modi architecto.
-          </p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown"><i>For Pipedreams and Daydreams</i></h2>
+            <p class="animate__animated animate__fadeInUp">
+              Take your ludicrous longings and transform them into reasonable requests! Cheers to both fleeting thrills
+              and enduring success. It’s our “problem-free philosophy.” It’s our “Pinterest for Bucket List.” It’s: “An
+              inappropriately casual approach to life.”
+            </p>
+            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+          </div>
         </div>
-      </div> -->
         <!-- Slide 3 -->
         <!-- <div class="carousel-item">
         <div class="carousel-container">
@@ -78,38 +84,45 @@
     <section id="about" class="about">
       <div class="container">
         <div class="section-title" data-aos="zoom-out">
-          <h2>About</h2>
-          <p>Who we are</p>
+          <h2>Your Digital Bucket List</h2>
+          <p>Learn More</p>
         </div>
 
         <div class="row content" data-aos="fade-up">
           <div class="col-lg-6">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.
+              Run Rabbit Run is a digital bucket list where you organize your desires and break them down into small,
+              actionable steps. Take your tall orders and turn them into teeny tasks.
+            </p>
+            <p>
+              Achieving long-term goals has been clinically proven to raise your self esteem over time. Trust us, we
+              took Psychology in college. But really, what is life but a collection of real experiences?
             </p>
             <ul>
               <li>
                 <i class="ri-check-double-line"></i>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat
+                Create bucket list items all your desired “experiences”
               </li>
               <li>
                 <i class="ri-check-double-line"></i>
-                Duis aute irure dolor in reprehenderit in voluptate velit
+                Add detailed subtasks to help you achieve each new milestone
               </li>
               <li>
                 <i class="ri-check-double-line"></i>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat
+                Assign tags to each experience to by mood
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i>
+                Plan/prioritize/pursue!
               </li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Achieve your goal? Send it over to your bucket and watch overflow. Fill it up, make it heavy. If it’s
+              heavy enough, you can’t knock it over. It’s very full, and so are you. You are happy. You live forever.
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            <a href="/bucket" class="btn-learn-more">What's A Bucket?</a>
           </div>
         </div>
       </div>
