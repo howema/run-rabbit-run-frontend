@@ -145,7 +145,7 @@
           </div>
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Add Some Tags</h3>
+              <h3>Add Tags</h3>
               <form v-on:submit.prevent="createTag()">
                 <multiselect
                   v-model="value"
@@ -168,17 +168,6 @@
                 <input type="submit" value="Add Tags" />
               </form>
             </div>
-            <!-- ======= Solid Button Section ======= -->
-            <section id="pricing" class="pricing">
-              <!-- <div class="col-lg-3 col-md-6"> -->
-              <div class="btn-wrap">
-                <router-link v-bind:to="`/experiences/${experience.id}/edit`" class="btn-buy">Edit Details</router-link>
-                <!-- <a href="/tags" class="btn-buy">Back to Tags</a> -->
-              </div>
-              <!-- </div> -->
-            </section>
-
-            <!-- End Solid Button Section -->
           </div>
 
           <div class="col-lg-4">
@@ -259,7 +248,9 @@ export default {
     axios.get("/experiences/" + this.$route.params.id).then((response) => {
       this.experience = response.data;
       this.experience_tags = response.data.tags;
-      console.log(response.data);
+      // console.log(response.data);
+      console.log("ExperienceShow:", this.experience);
+      console.log("ExperienceTags:", this.experience_tags);
     });
     this.getTags();
   },
@@ -267,21 +258,21 @@ export default {
     getTags: function () {
       axios.get("/tags/").then((response) => {
         response.data.forEach((item) => {
-          console.log(item);
+          // console.log("Tag:", item);
           var object = {};
           object["name"] = item.name;
           object["id"] = item.id;
           this.options.push(object);
         });
         this.tags = response.data;
-        console.log(response.data);
-        console.log(this.options);
+        // console.log(response.data);
+        console.log("Options:", this.options);
       });
     },
     updateCheckbox: function () {
       var params = { complete: true };
       axios.patch(`/experiences/${this.$route.params.id}`, params).then((response) => {
-        console.log(response.data);
+        console.log("Checkbox Updated:", response.data);
         this.$router.push("/bucket");
       });
     },

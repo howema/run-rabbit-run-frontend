@@ -90,7 +90,7 @@
               <p>
                 <i><b>Tags:</b></i>
               </p>
-              <div v-for="tag in experience_tags" v-bind:key="tag.id">
+              <div v-for="tag in experience.tags" v-bind:key="tag.id">
                 <i>{{ tag.name }}</i>
               </div>
               <p></p>

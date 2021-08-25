@@ -11,10 +11,9 @@
               <span>Run Rabbit Run</span>
             </h2>
             <p class="animate__animated fanimate__adeInUp">
-              Welcome {{ user.name }}, to your own personal utopia. Adventure is just down the street. Play life in
-              sandbox mode. Plan your gap year, delay the real world, or leave it entirely. An app for seasonal workers,
-              digital nomads, and flighty fools. For your neighbor and for your sister. For all the bunnies chasing
-              carrots.
+              Welcome to your own personal utopia. Adventure is just down the street. Play life in sandbox mode. Plan
+              your gap year, delay the real world, or leave it entirely. An app for seasonal workers, digital nomads,
+              and flighty fools. For your neighbor and for your sister. For all the bunnies chasing carrots.
             </p>
             <p>Run Rabbit, Run.</p>
 
@@ -36,20 +35,20 @@
           </div>
         </div>
         <!-- Slide 3 -->
-        <ul v-if="isLoggedIn()">
-          <div class="carousel-item">
-            <div class="carousel-container">
-              <h2 class="animate__animated animate__fadeInDown"><i>"The Flavor Overtaking the Nation"</i></h2>
-              <p class="animate__animated animate__fadeInUp">
-                Okay {{ user.name }}, we know your favorite thing is {{ user.favorite_thing }}. Unfortunately, life
-                isn't all {{ user.favorite_thing }} and roses - as they say. It's time to get out more. To spread your
-                wings and fly. Time to work toward your goals. Good news! Our clinical research tells us that success
-                tastes like {{ user.favorite_thing }}. So there's that to look forward to.
-              </p>
-              <a href="/notepad" class="btn-get-started animate__animated animate__fadeInUp scrollto">Notepad</a>
-            </div>
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <!-- <ul v-if="isLoggedIn()"> -->
+            <h2 class="animate__animated animate__fadeInDown"><i>"The Flavor Overtaking the Nation"</i></h2>
+            <p class="animate__animated animate__fadeInUp">
+              Okay {{ user.name }}, we know your favorite thing is {{ user.favorite_thing }}. Unfortunately, life isn't
+              all {{ user.favorite_thing }} and roses - as they say. It's time to get out more. To spread your wings and
+              fly. Time to work toward your goals. Good news! Our clinical research tells us that success tastes like
+              {{ user.favorite_thing }}. So there's that to look forward to.
+            </p>
+            <a href="/notepad" class="btn-get-started animate__animated animate__fadeInUp scrollto">Notepad</a>
+            <!-- </ul> -->
           </div>
-        </ul>
+        </div>
 
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
