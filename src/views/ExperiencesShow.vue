@@ -163,6 +163,9 @@
                     <router-link v-bind:to="`/experiences/${experience.id}/edit`" class="btn-learn-more">
                       Edit Details
                     </router-link>
+
+                    <!-- <a href="/experiences" class="btn-learn-more">Back to All</a>
+                    <a href="/tags" class="btn-learn-more">Back to Tags</a> -->
                   </div>
                 </div>
               </div>
@@ -174,7 +177,7 @@
             <div class="portfolio-info">
               <div class="bucket-push">
                 <div v-if="experience.complete == false">
-                  <h3><strong>Complete? Add it to Your Bucket!</strong></h3>
+                  <h3>Complete? Add it to Your Bucket!</h3>
                   <form v-on:submit.prevent="updateCheckbox()">
                     <div id="v-model-checkbox" class="completed">
                       <input type="checkbox" id="checkbox" v-model="checked" />
@@ -186,18 +189,29 @@
                 </div>
               </div>
             </div>
+            <!-- ======= Outline Button Section ======= -->
+            <section id="about" class="about">
+              <div class="container">
+                <div class="row content" data-aos="fade-up">
+                  <div class="col-lg-6 pt-4 pt-lg-0">
+                    <!-- <router-link v-bind:to="`/experiences/${experience.id}/edit`" class="btn-learn-more">
+                      Edit Details
+                    </router-link> -->
+
+                    <a href="/experiences" class="btn-learn-more">Back to All</a>
+                    <a href="/tags" class="btn-learn-more">Back to Tags</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End Outline Button Section -->
           </div>
         </div>
       </div>
     </section>
     <!-- End Portfolio Details Section -->
     <div class="container">
-      <p></p>
-      <p></p>
-      <router-link to="/experiences">Back to All</router-link>
-
-      <p></p>
-      <p></p>
+      <!-- <router-link to="/experiences">Back to All</router-link> -->
     </div>
   </div>
 </template>
