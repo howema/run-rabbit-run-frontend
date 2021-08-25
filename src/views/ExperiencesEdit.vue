@@ -38,7 +38,6 @@
                             class="form-control"
                             id="timeline"
                             placeholder="Timeline"
-                            required
                           />
                         </div>
                         <div class="col-md-6 form-group mt-3 mt-md-0">
@@ -49,7 +48,6 @@
                             name="travel-type"
                             id="travel-type"
                             placeholder="Travel Type"
-                            required
                           />
                         </div>
                         <div class="col-md-6 form-group">
@@ -60,7 +58,6 @@
                             class="form-control"
                             id="budget"
                             placeholder="Budget"
-                            required
                           />
                         </div>
                         <div class="col-md-6 form-group mt-3 mt-md-0">
@@ -71,7 +68,6 @@
                             name="image"
                             id="image"
                             placeholder="Image"
-                            required
                           />
                         </div>
                         <p></p>
@@ -84,7 +80,6 @@
                           name="task1"
                           id="task1"
                           placeholder="First Milestone"
-                          required
                         />
                       </div>
                       <div class="col-md-6 form-group">
@@ -95,7 +90,6 @@
                           class="form-control"
                           id="task1a"
                           placeholder="Subtask"
-                          required
                         />
                       </div>
                       <div class="col-md-6 form-group">
@@ -106,7 +100,6 @@
                           class="form-control"
                           id="task1b"
                           placeholder="Subtask"
-                          required
                         />
                       </div>
                       <div class="col-md-6 form-group">
@@ -117,7 +110,6 @@
                           class="form-control"
                           id="task1c"
                           placeholder="Subtask"
-                          required
                         />
                       </div>
                       <div class="form-group mt-3">
@@ -128,7 +120,6 @@
                           name="task2"
                           id="task2"
                           placeholder="Second Milestone"
-                          required
                         />
                       </div>
                       <div class="col-md-6 form-group">
@@ -139,7 +130,6 @@
                           class="form-control"
                           id="task2a"
                           placeholder="Subtask"
-                          required
                         />
                       </div>
                       <div class="col-md-6 form-group">
@@ -150,7 +140,6 @@
                           class="form-control"
                           id="task2b"
                           placeholder="Subtask"
-                          required
                         />
                       </div>
                       <div class="col-md-6 form-group">
@@ -161,7 +150,6 @@
                           class="form-control"
                           id="task2c"
                           placeholder="Subtask"
-                          required
                         />
                       </div>
                       <div class="form-group mt-3">
@@ -172,7 +160,6 @@
                           name="task3"
                           id="task3"
                           placeholder="Third Milestone"
-                          required
                         />
                       </div>
                       <div class="col-md-6 form-group">
@@ -183,7 +170,6 @@
                           class="form-control"
                           id="task3a"
                           placeholder="Subtask"
-                          required
                         />
                       </div>
                       <div class="col-md-6 form-group">
@@ -194,7 +180,6 @@
                           class="form-control"
                           id="task3b"
                           placeholder="Subtask"
-                          required
                         />
                       </div>
                       <div class="col-md-6 form-group">
@@ -205,7 +190,6 @@
                           class="form-control"
                           id="task3c"
                           placeholder="Subtask"
-                          required
                         />
                       </div>
                       <div class="form-group mt-3">
@@ -215,7 +199,6 @@
                           name="notes"
                           rows="5"
                           placeholder="Notes"
-                          required
                         ></textarea>
                       </div>
                       <div class="text-center"><button type="submit">Submit Changes</button></div>
