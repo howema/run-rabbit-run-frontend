@@ -44,7 +44,7 @@
             <ul class="faq-list">
               <li>
                 <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">
-                  I did it! I achieved one of my dreams.
+                  I did it!
                   <i class="bi bi-chevron-down icon-show"></i>
                   <i class="bi bi-chevron-up icon-close"></i>
                 </div>
@@ -85,9 +85,12 @@
 </template>
 
 <style>
-img {
+/* img {
   max-width: 300px;
-}
+} */
+/* bucket-index {
+  background-image: url("src/assets/img/yellow-bucket.jpg");
+} */
 </style>
 
 <script>
