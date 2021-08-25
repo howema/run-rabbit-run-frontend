@@ -162,7 +162,7 @@
                 >
                   <template slot="selection" slot-scope="{ values, search, isOpen }">
                     <span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">
-                      {{ values.length }} options selected
+                      {{ values.length }} Tag(s) Selected
                     </span>
                   </template>
                 </multiselect>
