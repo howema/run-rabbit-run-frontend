@@ -8,7 +8,7 @@
         <div class="carousel-item active">
           <div class="carousel-container">
             <h2 class="animate__animated animate__fadeInDown">
-              <span>Run Rabbit Run</span>
+              <span><i>Run Rabbit Run</i></span>
             </h2>
             <p class="animate__animated fanimate__adeInUp">
               Welcome to your own personal utopia. Adventure is just down the street. Play life in sandbox mode. Plan
@@ -27,10 +27,10 @@
           <div class="carousel-container">
             <h2 class="animate__animated animate__fadeInDown"><i>"For Pipedreams and Daydreams"</i></h2>
             <p class="animate__animated animate__fadeInUp">
-              Take your ludicrous longings and transform them into reasonable requests! Cheers to both fleeting thrills
-              and enduring success. It’s our “problem-free philosophy.” It’s our “Pinterest for Bucket List.” It’s: “An
-              inappropriately casual approach to life.”
+              Transforms your ludicrous longings into reasonable requests! Cheers to fleeting thrills and enduring
+              success! It’s our “problem-free philosophy.” It’s our “Pinterest for Bucket List!”
             </p>
+            <p>It’s “an inappropriately casual approach to life.”</p>
             <a href="/tags" class="btn-get-started animate__animated animate__fadeInUp scrollto">What's Your Mood?</a>
           </div>
         </div>
