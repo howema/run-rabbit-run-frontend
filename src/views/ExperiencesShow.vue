@@ -3,8 +3,9 @@
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-        <div class="align-items-center">
-          <h2></h2>
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- <h6>Success tastes like {{ user.favorite_thing }}</h6> -->
+          <h6></h6>
           <ol>
             <li><a href="/">Home</a></li>
             <li>Details</li>
@@ -174,7 +175,7 @@
             <div class="portfolio-info">
               <div class="bucket-push">
                 <div v-if="experience.complete == false">
-                  <h3>Complete? Add it to Your Bucket!</h3>
+                  <h3>Complete? Add To Your Bucket!</h3>
                   <form v-on:submit.prevent="updateCheckbox()">
                     <div id="v-model-checkbox" class="completed">
                       <input type="checkbox" id="checkbox" v-model="checked" />
@@ -196,8 +197,9 @@
                       Edit Details
                     </router-link> -->
 
-                    <a href="/experiences" class="btn-learn-more">Back to All</a>
                     <a href="/tags" class="btn-learn-more">Back to Tags</a>
+                    <p></p>
+                    <a href="/experiences" class="btn-learn-more">Back to All</a>
                   </div>
                 </div>
               </div>
@@ -242,6 +244,8 @@ export default {
       tag_id: [],
       value: [],
       options: [],
+      user: [],
+      current_user_id: localStorage.getItem("user_id"),
     };
   },
   created: function () {
@@ -253,6 +257,10 @@ export default {
       console.log("ExperienceTags:", this.experience_tags);
     });
     this.getTags();
+    axios.get("/users/" + this.current_user_id).then((response) => {
+      this.user = response.data;
+      console.log(response.data.users);
+    });
   },
   methods: {
     getTags: function () {
