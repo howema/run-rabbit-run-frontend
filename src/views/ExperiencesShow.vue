@@ -69,6 +69,19 @@
                   </div>
                 </li>
               </ul>
+              <!-- ======= Solid Button Section ======= -->
+              <section id="pricing" class="pricing">
+                <!-- <div class="col-lg-3 col-md-6"> -->
+                <div class="btn-wrap">
+                  <router-link v-bind:to="`/experiences/${experience.id}/edit`" class="btn-buy">
+                    Edit Details
+                  </router-link>
+                  <!-- <a href="/tags" class="btn-buy">Back to Tags</a> -->
+                </div>
+                <!-- </div> -->
+              </section>
+
+              <!-- End Solid Button Section -->
             </div>
           </div>
 
@@ -155,22 +168,17 @@
                 <input type="submit" value="Add Tags" />
               </form>
             </div>
-            <!-- ======= Outline Button Section ======= -->
-            <section id="about" class="about">
-              <div class="container">
-                <div class="row content" data-aos="fade-up">
-                  <div class="col-lg-6 pt-4 pt-lg-0">
-                    <router-link v-bind:to="`/experiences/${experience.id}/edit`" class="btn-learn-more">
-                      Edit Details
-                    </router-link>
-
-                    <!-- <a href="/experiences" class="btn-learn-more">Back to All</a>
-                    <a href="/tags" class="btn-learn-more">Back to Tags</a> -->
-                  </div>
-                </div>
+            <!-- ======= Solid Button Section ======= -->
+            <section id="pricing" class="pricing">
+              <!-- <div class="col-lg-3 col-md-6"> -->
+              <div class="btn-wrap">
+                <router-link v-bind:to="`/experiences/${experience.id}/edit`" class="btn-buy">Edit Details</router-link>
+                <!-- <a href="/tags" class="btn-buy">Back to Tags</a> -->
               </div>
+              <!-- </div> -->
             </section>
-            <!-- End Outline Button Section -->
+
+            <!-- End Solid Button Section -->
           </div>
 
           <div class="col-lg-4">
@@ -193,7 +201,8 @@
             <section id="about" class="about">
               <div class="container">
                 <div class="row content" data-aos="fade-up">
-                  <div class="col-lg-6 pt-4 pt-lg-0">
+                  <div class="btn-wrap">
+                    <!-- <div class="col-lg-6 pt-4 pt-lg-0"> -->
                     <!-- <router-link v-bind:to="`/experiences/${experience.id}/edit`" class="btn-learn-more">
                       Edit Details
                     </router-link> -->
@@ -203,6 +212,7 @@
                   </div>
                 </div>
               </div>
+              <!-- </div> -->
             </section>
             <!-- End Outline Button Section -->
           </div>
